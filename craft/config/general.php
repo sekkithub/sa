@@ -12,7 +12,7 @@ return array(
         'omitScriptNameInUrls' => true,
         'allowAutoUpdates' => false,
         'defaultImageQuality' => 85,
-        'cpTrigger' => 'cp'
+        'cpTrigger' => 'sacp'
     ),
 
     'localhost' => array(
@@ -27,45 +27,34 @@ return array(
 
     '.dev' => array(
         'devMode' => true,
-        'siteUrl' => 'http://base-craft.dev',
+        'siteUrl' => 'http://sa.dev',
         'environmentVariables' => array(
-          'baseUrl' => 'http://base-craft.dev',
+          'baseUrl' => 'http://sa.dev',
           'basePath' => '../public/'
         ),
         'environment' => 'dev'
     ),
 
-    'dbh.tnhdev.com' => array(
+    'sa-dev.sekkithub.com' => array(
         'devMode' => false,
         'cooldownDuration' => 0,
         'environmentVariables' => array(
-          'baseUrl' => 'https://sample.tnhdev.com',
-          'basePath' => '/home/forge/sample.tnhdev.com/public/',
+          'baseUrl' => 'http://sa-dev.sekkithub.com',
+          'basePath' => '/apps/sa/develop/public/',
         ),
-        'siteUrl' => 'https://sample.tnhdev.com',
-        'environment' => 'staging'
+        'siteUrl' => 'http://sa-dev.sekkithub.com',
+        'environment' => 'develop'
     ),
 
-    'dbh.tnhstage.com' => array(
+    'sa-stage.sekkithub.com' => array(
         'devMode' => false,
         'cooldownDuration' => 0,
         'environmentVariables' => array(
-          'baseUrl' => 'https://sample.tnhstage.com',
-          'basePath' => '/home/forge/sample.tnhstage.com/public/',
+          'baseUrl' => 'http://sa-stage.sekkithub.com',
+          'basePath' => '/apps/sa/staging/public/',
         ),
-        'siteUrl' => 'https://sample.tnhstage.com',
+        'siteUrl' => 'http://sa-stage.sekkithub.com',
         'environment' => 'staging'
-    ),
-
-    'dbh.tnhprod.com' => array(
-        'devMode' => false,
-        'cooldownDuration' => 0,
-        'environmentVariables' => array(
-          'baseUrl' => 'https://sample.tnhprod.com',
-          'basePath' => '/home/forge/sample.tnhprod.com/public/',
-        ),
-        'siteUrl' => 'https://sample.tnhprod.com',
-        'environment' => 'production'
     ),
 
     'www.dinnerbyheston.com' => array(

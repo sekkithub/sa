@@ -11,26 +11,25 @@ $dev = array(
     'server' => 'localhost',
     'user' => 'root',
     'password' => '',
-    'database' => 'basecraft_dev');
+    'database' => 'sa_dev');
 
 $develop = array(
     'server' => 'localhost',
-    'user' => '',
-    'password' => '',
-    'database' => '');
+    'user' => 'sa',
+    'password' => 'wEmdQuVXGjSHQtWF',
+    'database' => 'sa_develop');
 
 $staging = array(
     'server' => 'localhost',
-    'user' => '',
-    'password' => '',
-    'database' => '');
+    'user' => 'sa',
+    'password' => 'wEmdQuVXGjSHQtWF',
+    'database' => 'sa_staging');
 
 $production = array(
     'server' => 'localhost',
     'user' => '',
     'password' => '',
     'database' => '');
-
 
 return array(
     '*' => array(
@@ -39,8 +38,7 @@ return array(
     '.dev' => $dev,
     'localhost' => $dev,
     '192.168.1' => $dev,
-    'tnhdev.com' => $develop,
-    'tnhstage.com' => $staging,
-    'tnhprod.com' => $production,
+    'sa-dev.sekkithub.com' => $develop,
+    'sa-stage.sekkithub.com' => $staging,
     'www.sample.com' => $production
 );
