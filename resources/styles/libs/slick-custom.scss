@@ -1,0 +1,66 @@
+/* =======================
+   Slick Carousel Custom Style
+   ======================= */
+
+@import "../settings.colors";
+@import "../tools.color";
+
+.slick-slider {
+  margin-bottom: 60px !important;
+}
+
+.slick-loading .slick-list {
+  background: url('/images/loader.svg') no-repeat center center;
+}
+
+.slick-arrow {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 28px;
+  height: 51px;
+  outline: none;
+}
+
+.slick-prev, .slick-next {
+  height: 100%;
+  width: 50%;
+  z-index: 999;
+
+  &:before {
+    content: '';
+    font-family: inherit;
+  }
+}
+
+.slick-prev {
+  cursor: url(/images/vendor/slick/prev-arrow-black.svg), w-resize;
+  float: left;
+  left: 0;
+}
+
+.slick-next {
+  cursor: url(/images/vendor/slick/next-arrow-black.svg), default;
+  float: right;
+  right: 0;
+}
+
+.slick-dots {
+  bottom: -36px;
+}
+
+.slick-dots li button:before {
+  color: color(base-grey);
+  font-family: inherit;
+  font-size: 40px !important;
+}
+
+.slick-dots li:hover button:before {
+  color: color(base-dark-grey);
+}
+
+.slick-dots li.slick-active button:before {
+  color: color(base-dark-grey);
+  opacity: 1;
+}
