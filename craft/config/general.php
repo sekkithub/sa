@@ -40,7 +40,7 @@ return array(
         'cooldownDuration' => 0,
         'environmentVariables' => array(
           'baseUrl' => 'http://sa-dev.sekkithub.com',
-          'basePath' => '/apps/sa/develop/public/',
+          'basePath' => '/home/deployer/apps/sa/develop/public/',
         ),
         'siteUrl' => 'http://sa-dev.sekkithub.com',
         'environment' => 'develop'
@@ -51,7 +51,7 @@ return array(
         'cooldownDuration' => 0,
         'environmentVariables' => array(
           'baseUrl' => 'http://sa-stage.sekkithub.com',
-          'basePath' => '/apps/sa/staging/public/',
+          'basePath' => '/home/deployer/apps/sa/staging/public/',
         ),
         'siteUrl' => 'http://sa-stage.sekkithub.com',
         'environment' => 'staging'
