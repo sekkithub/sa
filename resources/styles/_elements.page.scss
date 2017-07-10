@@ -3,7 +3,7 @@
    ======================= */
 
 html, body {
-  font-family: 'Helvetica', sans-serif;
+  @include font-family(book);
 }
 
 html {

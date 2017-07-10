@@ -46,9 +46,14 @@ return array(
         'environment' => 'develop'
     ),
 
+
     'sa-stage.sekkithub.com' => array(
         'devMode' => false,
         'cooldownDuration' => 0,
+        'environmentVariables' => array(
+          'baseUrl' => 'http://sa-stage.sekkithub.com/',
+          'basePath' => '/home/deployer/apps/sa/staging/public/',
+        ),
         'siteUrl' => 'http://sa-stage.sekkithub.com/',
         'environment' => 'staging'
     ),
