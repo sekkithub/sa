@@ -36,13 +36,10 @@
 
     .c-button__text {
       color: color(white);
-      transition: all .2s;
-    }
-
-    .c-button__text {
       display: inline-block;
       text-align: center;
-      // text-transform: uppercase;
+      text-transform: uppercase;
+      transition: all .2s;
       @include font-family(book);
-      @include font-size(14px);
+      @include font-size(12px);
     }

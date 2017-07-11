@@ -4,5 +4,13 @@
 
 .o-heading {
   @include font-family(book);
+  @include font-size(15px);
+}
+
+.o-heading--large {
   @include font-size(50px);
+}
+
+.o-heading--uppercase {
+  text-transform: uppercase;
 }

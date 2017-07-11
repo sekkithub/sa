@@ -1,0 +1,26 @@
+/* =======================
+   Components/Accordion Nav
+   ======================= */
+.c-accordion-nav {
+
+}
+
+  .c-accordion-nav__item {
+  }
+
+  .c-accordion-nav__item:first-child .c-accordion-nav__heading {
+    border-top: 1px solid color(dark-grey);
+  }
+
+  .c-accordion-nav__heading {
+    border-bottom: 1px solid color(dark-grey);
+    cursor: pointer;
+    padding-bottom: $unit;
+    padding-top: $unit;
+  }
+
+    .c-accordion-nav__content {
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+    }

@@ -4,6 +4,8 @@
 
 .o-copy {
   color: #333;
+  margin-bottom: $unit;
   @include font-family(book);
   @include font-size(15px);
+  @include hide_last_margin;
 }
