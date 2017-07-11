@@ -1,0 +1,9 @@
+/* =======================
+   Objects/Copy
+   ======================= */
+
+.o-copy {
+  color: #333;
+  @include font-family(book);
+  @include font-size(15px);
+}

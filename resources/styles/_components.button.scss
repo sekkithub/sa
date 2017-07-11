@@ -5,17 +5,16 @@
 }
 
   .c-button__button {
-    background-color: color(black);
-    border: 2px solid color(black);
+    background-color: color(dark-grey);
+    border: 1px solid color(dark-grey);
     cursor: pointer;
     max-width: 100%;
     outline: none;
-    padding: 4px 22px;
+    padding: 2px 22px;
     position: relative;
     text-align: center;
     text-decoration: none;
     transition: all .2s;
-    width: 100%;
 
     @include mq($from: tablet) {
       max-width: 480px;
@@ -31,7 +30,7 @@
     }
 
     &:hover .c-button__text {
-      color: color(black)
+      color: color(dark-grey);
     }
   }
 
@@ -43,7 +42,7 @@
     .c-button__text {
       display: inline-block;
       text-align: center;
-      text-transform: uppercase;
-      @include font-family(bold);
+      // text-transform: uppercase;
+      @include font-family(book);
       @include font-size(14px);
     }

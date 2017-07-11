@@ -1,0 +1,16 @@
+/* =======================
+   Components/Social
+   ======================= */
+.c-social {
+
+}
+
+  .c-social__link {
+    text-decoration: none;
+    transition: all .2s ease;
+    @include font-size(18px);
+
+    &:hover {
+      color: color(grey);
+    }
+  }

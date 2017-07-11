@@ -61,10 +61,14 @@ $mq-breakpoints: (
 @import "../../node_modules/inuitcss/objects/objects.list-inline";
 @import "../../node_modules/inuitcss/objects/objects.block";
 @import "objects.heading";
+@import "objects.copy";
 
 
 // COMPONENTS
+@import "components.header";
+@import "components.container";
 @import "components.button";
+@import "components.social";
 
 
 // UTILITIES

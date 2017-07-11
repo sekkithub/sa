@@ -4,7 +4,9 @@
 
 $colors: (
   white: #ffffff,
-  black: #000000
+  black: #000000,
+  dark-grey: #333333,
+  grey: #999999,
 );
 
 $base-text-color-dark: map-get($colors, 'black');
