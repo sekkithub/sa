@@ -2,13 +2,24 @@
    Components/Social
    ======================= */
 .c-social {
-
+  display: inline-block;
+  margin-bottom: $unit;
+  @include hide_last_margin;
 }
 
   .c-social__link {
+    margin: 0 3px;
     text-decoration: none;
     transition: all .2s ease;
     @include font-size(18px);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &:hover {
       color: color(grey);

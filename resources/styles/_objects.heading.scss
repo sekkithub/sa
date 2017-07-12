@@ -3,6 +3,7 @@
    ======================= */
 
 .o-heading {
+  @include font-weight(normal);
   @include font-family(book);
   @include font-size(15px);
 }
