@@ -10,15 +10,28 @@
   }
 
   .c-accordion-nav__item.active {
-    & .c-accordion-nav__spacer {
+    .c-accordion-nav__spacer {
       padding: 0;
     }
 
-    & .c-accordion-nav__content {
+    .c-accordion-nav__content {
       height: 500px;
       padding-bottom: $unit-large;
       padding-top: $unit-large;
       transition: all .6s .3s;
+    }
+
+    .c-accordion-nav__plus {
+      transition: all .2s;
+
+      &:before {
+        top: 8px;
+        transform: rotate(0deg);
+      }
+
+      &:after {
+        right: 0;
+      }
     }
   }
 
@@ -54,4 +67,34 @@
 
           .c-accordion-nav__copy {
             color: color(white);
+          }
+
+        .c-accordion-nav__status {
+          position: relative;
+        }
+
+          .c-accordion-nav__plus {
+            &:before,
+            &:after {
+              content: '';
+              width: 11px;
+              height: 5px;
+              border-bottom: 1px solid color(dark-grey);
+              position: absolute;
+              right: 0;
+              top: 10px;
+              transition: all .2s .2s;
+            }
+
+            &:before {
+              transform: rotate(90deg);
+              right: 0;
+              top: 10px;
+            }
+
+            &:after {
+              right: 2px;
+              top: 8px;
+              transition: all 0.5s;
+            }
           }
