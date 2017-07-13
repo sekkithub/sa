@@ -6,21 +6,52 @@
 }
 
   .c-accordion-nav__item {
+    position: relative;
   }
 
-  .c-accordion-nav__item:first-child .c-accordion-nav__heading {
-    border-top: 1px solid color(dark-grey);
-  }
-
-  .c-accordion-nav__heading {
-    border-bottom: 1px solid color(dark-grey);
-    cursor: pointer;
-    padding-bottom: $unit;
-    padding-top: $unit;
-  }
-
-    .c-accordion-nav__content {
-      height: 0;
-      opacity: 0;
-      visibility: hidden;
+  .c-accordion-nav__item.active {
+    & .c-accordion-nav__spacer {
+      padding: 0;
     }
+
+    & .c-accordion-nav__content {
+      height: 500px;
+      padding-bottom: $unit-large;
+      padding-top: $unit-large;
+      transition: all .6s .3s;
+    }
+  }
+
+    .c-accordion-nav__spacer {
+      bottom: 0;
+      position: absolute;
+      transition: all .3s;
+      width: 100%;
+    }
+
+    .c-accordion-nav__underline {
+      border-bottom: 1px solid color(dark-grey);
+    }
+
+      .c-accordion-nav__clickable-area {
+        cursor: pointer;
+        padding-bottom: $unit;
+        padding-top: $unit;
+      }
+
+        .c-accordion-nav__heading {
+          display: inline-block;
+          transition: transform .3s;
+          user-select: none;
+        }
+
+        .c-accordion-nav__content {
+          background-color: color(dark-grey);
+          height: 0;
+          overflow: hidden;
+          transition: all .3s;
+        }
+
+          .c-accordion-nav__copy {
+            color: color(white);
+          }
