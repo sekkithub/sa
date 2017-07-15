@@ -10,19 +10,39 @@
     padding-bottom: $unit-small;
     padding-top: $unit-small;
     text-align: right;
+
+    &:hover .c-footer__text {
+      transform: translateY(-100%);
+    }
+
+    &:hover .c-footer__link {
+      transform: translateY(0);
+    }
   }
 
-    .c-footer__text {
+    .c-footer__credit {
       color: color(grey);
       display: inline-block;
+      height: 14px;
       overflow: hidden;
       position: relative;
+      width: 100%;
       @include font-size(14px, 1);
-
-      span {
-        // position: absolute;
-      }
-
-      span:nth-child(2) {
-      }
     }
+
+      .c-footer__text,
+      .c-footer__link {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        transition: all .2s;
+        right: 0;
+      }
+
+      .c-footer__text {
+        transform: translateY(0);
+      }
+
+      .c-footer__link {
+        transform: translateY(100%);
+      }
