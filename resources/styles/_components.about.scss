@@ -32,6 +32,7 @@
 
   .c-about__body.active ~ .c-about__button {
     height: 0;
+    margin: 0;
     opacity: 0;
     visibility: hidden;
   }
