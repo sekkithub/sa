@@ -55,11 +55,17 @@
         cursor: pointer;
         padding-bottom: $unit-small;
         padding-top: $unit-small;
+
+        &:hover .c-accordion-nav__heading {
+          transform: translateX(10px);
+        }
       }
 
         .c-accordion-nav__heading {
+          backface-visibility: hidden;
           display: inline-block;
           transition: transform .3s;
+          transform: translateX(0);
           user-select: none;
         }
 

@@ -51,16 +51,16 @@
 }
 
 .slick-dots li button:before {
-  color: color(base-grey);
+  color: color(black);
   font-family: inherit;
   font-size: 40px !important;
 }
 
 .slick-dots li:hover button:before {
-  color: color(base-dark-grey);
+  color: color(black);
 }
 
 .slick-dots li.slick-active button:before {
-  color: color(base-dark-grey);
+  color: color(black);
   opacity: 1;
 }
