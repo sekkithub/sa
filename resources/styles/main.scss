@@ -12,6 +12,7 @@ $bt-font-path: '/fonts/black-tie/fonts';
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
 @import "libs/slick-custom.scss";
 @import "../../node_modules/plyr/src/scss/plyr.scss";
+@import "../../node_modules/smooth-scrollbar/dist/smooth-scrollbar.css";
 
 
 // TOOLS
@@ -46,7 +47,7 @@ $mq-breakpoints: (
 @import "../../node_modules/inuitcss/elements/elements.images";
 @import "../../node_modules/inuitcss/elements/elements.tables";
 @import "elements.links";
-@import "elements.text";
+@import "elements.section";
 
 
 // OBJECTS
@@ -70,6 +71,9 @@ $mq-breakpoints: (
 @import "components.social";
 @import "components.about";
 @import "components.accordion-nav";
+@import "components.carousel";
+@import "components.contact";
+@import "components.footer";
 
 
 // UTILITIES

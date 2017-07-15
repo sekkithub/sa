@@ -1,0 +1,28 @@
+/* =======================
+   Components/Footer
+   ======================= */
+.c-footer {
+  background-color: color(white);
+}
+
+  .c-footer__content {
+    border-top: 1px solid color(light-grey);
+    padding-bottom: $unit-small;
+    padding-top: $unit-small;
+    text-align: right;
+  }
+
+    .c-footer__text {
+      color: color(grey);
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      @include font-size(14px);
+
+      span {
+        // position: absolute;
+      }
+
+      span:nth-child(2) {
+      }
+    }

@@ -5,6 +5,7 @@ import ee from './components/ee';
 
 import './components/carousels';
 import './components/accordion-nav';
+// import './components/smooth-scrollbar';
 
 FastClick.attach(document.body);
 

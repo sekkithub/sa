@@ -15,9 +15,7 @@
     }
 
     .c-accordion-nav__content {
-      height: 500px;
-      padding-bottom: $unit-large;
-      padding-top: $unit-large;
+      height: 600px;
       transition: all .6s .3s;
     }
 
@@ -60,13 +58,21 @@
 
         .c-accordion-nav__content {
           background-color: color(dark-grey);
+          color: color(white);
           height: 0;
           overflow: hidden;
           transition: all .3s;
         }
 
-          .c-accordion-nav__copy {
-            color: color(white);
+          .c-accordion-nav__layout,
+          .c-accordion-nav__layout-item {
+            height: 100%;
+          }
+
+          .c-accordion-nav__details {
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100%;
+            padding: $unit-large;
           }
 
         .c-accordion-nav__status {

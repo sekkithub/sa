@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import ee from './ee';
 
-const $navOpener = $('.js-accordion-nav-opener');
+// const $navOpener = $('.js-accordion-nav-opener');
 
 function openNav() {
   if ($(this).closest('.js-accordion-nav-item').hasClass('active')) {
@@ -12,7 +12,7 @@ function openNav() {
 }
 
 function init() {
-  $navOpener.on('click', openNav);
+  $(document).off().on('click', '.js-accordion-nav-opener', openNav);
 }
 
 ee.addListener('init', init);

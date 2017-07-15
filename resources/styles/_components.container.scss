@@ -3,6 +3,8 @@
    ======================= */
 .c-container {
   background-color: color(white);
+  min-height: 100%;
+  // padding-bottom: $unit-huge;
   padding-top: $unit-huge;
   margin-top: 500px;
 }

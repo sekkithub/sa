@@ -1,0 +1,19 @@
+/* =======================
+   Components/Contact
+   ======================= */
+.c-contact {
+
+}
+
+  .c-contact__item {
+    margin-bottom: $unit;
+    @include hide_last_margin;
+  }
+
+    .c-contact__image {
+      width: 100%;
+    }
+
+    .c-contact__heading {
+      margin-bottom: $unit-tiny;
+    }
