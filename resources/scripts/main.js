@@ -3,8 +3,9 @@ import domready from 'domready';
 
 import ee from './components/ee';
 
-import './components/carousels';
+import './components/about';
 import './components/accordion-nav';
+import './components/carousels';
 // import './components/smooth-scrollbar';
 
 FastClick.attach(document.body);

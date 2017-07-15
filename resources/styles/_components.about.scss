@@ -9,3 +9,29 @@
     margin-bottom: $unit-huge;
   }
 }
+
+  .c-about__body {
+    overflow: hidden;
+    position: relative;
+    transition: all .4s ease;
+    height: 180px;
+  }
+
+    .c-about__gradient {
+      background-image: linear-gradient(to bottom, transparent 0%, color(white) 100%);
+      bottom: 0;
+      height: 100px;
+      transition: all .3s ease .3s;
+      position: absolute;
+      width: 100%;
+    }
+
+  .c-about__body.active .c-about__gradient {
+    height: 0;
+  }
+
+  .c-about__body.active ~ .c-about__button {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }

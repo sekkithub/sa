@@ -2,6 +2,9 @@
    Components/Buttons
    ======================= */
 .c-button {
+  margin-top: $unit;
+  transition: all .2s;
+  user-select: none;
 }
 
   .c-button__button {
