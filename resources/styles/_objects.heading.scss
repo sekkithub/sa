@@ -9,7 +9,15 @@
 }
 
 .o-heading--large {
-  @include font-size(50px);
+  @include font-size(30px);
+
+  @include mq($from: tablet) {
+    @include font-size(40px);
+  }
+
+  @include mq($from: desktop) {
+    @include font-size(50px);
+  }
 }
 
 .o-heading--uppercase {
