@@ -12,7 +12,13 @@
   .c-accordion-nav__item.active {
     .c-accordion-nav__spacer {
       padding: 0;
+      transition: all .3s;
     }
+
+      .c-accordion-nav__underline {
+        border-bottom-color: transparent;
+        transition-delay: .4s;
+      }
 
     .c-accordion-nav__content {
       height: 600px;
@@ -36,12 +42,13 @@
     .c-accordion-nav__spacer {
       bottom: 0;
       position: absolute;
-      transition: all .3s;
+      transition: all .3s .4s;
       width: 100%;
     }
 
     .c-accordion-nav__underline {
       border-bottom: 1px solid color(dark-grey);
+      transition: all .2s;
     }
 
       .c-accordion-nav__clickable-area {
