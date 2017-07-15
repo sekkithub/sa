@@ -3,6 +3,12 @@
    ======================= */
 
 section {
-  margin-bottom: $unit-huge;
-  margin-top: $unit-huge;
+  margin-bottom: $unit-large;
+  margin-top: $unit-large;
+  position: relative;
+
+  @include mq($from: desktop) {
+    margin-bottom: $unit-huge;
+    margin-top: $unit-huge;
+  }
 }

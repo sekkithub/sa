@@ -17,7 +17,7 @@
       display: inline-block;
       overflow: hidden;
       position: relative;
-      @include font-size(14px);
+      @include font-size(14px, 1);
 
       span {
         // position: absolute;

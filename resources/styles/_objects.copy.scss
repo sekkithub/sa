@@ -8,3 +8,7 @@
   @include font-size(15px);
   @include hide_last_margin;
 }
+
+.o-copy--small {
+  @include font-size(14px);
+}

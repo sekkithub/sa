@@ -2,6 +2,10 @@
    Components/About
    ======================= */
 .c-about {
-  margin-bottom: $unit-huge;
+  margin-bottom: $unit-large;
   max-width: 820px;
+
+  @include mq($from: desktop) {
+    margin-bottom: $unit-huge;
+  }
 }
