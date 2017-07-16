@@ -23,8 +23,10 @@
           </div>
         </div>
 
-        <div class="c-accordion-nav__content  c-carousel">
-          <div class="o-layout  o-layout--flush  c-accordion-nav__layout  c-carousel__slide" style="background-image: url(/images/photos/IMG_6241_670.jpg);">
+
+        <div class="c-accordion-nav__content  c-carousel  js-carousel">
+          {% for i in 0..10 %}
+          <div class="o-layout  o-layout--flush  c-accordion-nav__layout  c-carousel__slide  js-carousel-slide" style="background-image: url(/images/photos/IMG_6241_670.jpg);">
             <div class="o-layout__item  u-1/2@tablet"></div>
             <div class="o-layout__item  c-accordion-nav__layout-item  u-1/2@tablet">
               <div class="c-accordion-nav__details">
@@ -39,6 +41,17 @@
               </div>
             </div>
           </div>
+          {% endfor %}
+
+          <div class="c-carousel__controller">
+            <div class="c-carousel__prev  js-carousel-prev">
+              <i class="btr bt-angle-left"></i>
+            </div>
+            <div class="c-carousel__next  js-carousel-next">
+              <i class="btr bt-angle-right"></i>
+            </div>
+          </div>
+
         </div>
       </li>
 
@@ -97,25 +110,6 @@
       </li>
 
     </ul>
-
-
-    <!-- <div class="js-carousel">
-      {% for i in 0..10 %}
-      <div class="js-carousel-slide">
-        <img src="/images/placeholder-4-3.jpg" />
-      </div>
-      {% endfor %}
-
-      <div class="c-carousel__controller">
-        <div class="c-carousel__prev  js-carousel-prev">
-          <i class="btr bt-angle-left"></i>
-        </div>
-        <div class="c-carousel__next  js-carousel-next">
-          <i class="btr bt-angle-right"></i>
-        </div>
-      </div>
-    </div> -->
-
 
   {% include '_components/contact' %}
 

@@ -23,28 +23,28 @@
   outline: none;
 }
 
-.slick-prev, .slick-next {
-  height: 100%;
-  width: 50%;
-  z-index: 999;
+// .slick-prev, .slick-next {
+//   height: 100%;
+//   width: 50%;
+//   z-index: 999;
+//
+//   &:before {
+//     content: '';
+//     font-family: inherit;
+//   }
+// }
 
-  &:before {
-    content: '';
-    font-family: inherit;
-  }
-}
-
-.slick-prev {
-  cursor: url(/images/vendor/slick/prev-arrow-black.svg), w-resize;
-  float: left;
-  left: 0;
-}
-
-.slick-next {
-  cursor: url(/images/vendor/slick/next-arrow-black.svg), default;
-  float: right;
-  right: 0;
-}
+// .slick-prev {
+//   cursor: url(/images/vendor/slick/prev-arrow-black.svg), w-resize;
+//   float: left;
+//   left: 0;
+// }
+//
+// .slick-next {
+//   cursor: url(/images/vendor/slick/next-arrow-black.svg), default;
+//   float: right;
+//   right: 0;
+// }
 
 .slick-dots {
   bottom: -36px;
