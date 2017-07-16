@@ -11,12 +11,14 @@
     padding-top: $unit-small;
     text-align: right;
 
-    &:hover .c-footer__text {
-      transform: translateY(-100%);
-    }
+    @include mq($from: desktop) {
+      &:hover .c-footer__text {
+        transform: translateY(-100%);
+      }
 
-    &:hover .c-footer__link {
-      transform: translateY(0);
+      &:hover .c-footer__link {
+        transform: translateY(0);
+      }
     }
   }
 
@@ -40,9 +42,15 @@
       }
 
       .c-footer__text {
-        transform: translateY(0);
+        transform: translateY(-100%);
+        @include mq($from: desktop) {
+          transform: translateY(0);
+        }
       }
 
       .c-footer__link {
-        transform: translateY(100%);
+        transform: translateY(0);
+        @include mq($from: desktop) {
+          transform: translateY(100%);
+        }
       }

@@ -16,9 +16,19 @@ function addReadMore() {
   }
 }
 
+function setHeight() {
+  if ($aboutBody.hasClass('active')) {
+    const aboutHeight = $('.js-about-body.active .js-about-copy').height();
+    $aboutBody.height(aboutHeight);
+  }
+}
+
 function init() {
   addReadMore();
   $aboutCopyOpener.click(openMoreCopy);
+
+  $(window).resize(setHeight);
+  $(window).on('orientationchange', setHeight);
 }
 
 ee.addListener('init', init);
