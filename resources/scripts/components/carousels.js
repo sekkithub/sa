@@ -9,6 +9,7 @@ function carouselsInit() {
     $(this).not('.slick-initialized').slick({
       arrows: true,
       dots: true,
+      fade: true,
       slidesToShow: 1,
       lazyLoad: 'progressive',
       touchThreshold: 10,
