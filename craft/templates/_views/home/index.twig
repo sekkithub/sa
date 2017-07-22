@@ -27,6 +27,9 @@
         <div class="c-accordion-nav__content  c-carousel  js-carousel">
           {% for block in entry.works %}
           <div class="c-carousel__slide  js-carousel-slide"{% if block.backdropImage | length %} style="background-image: url({{ block.backdropImage.first().getUrl() }});"{% endif %}>
+            <div class="c-carousel__pagination">
+              {{ loop.index }} / {{ loop.length }}
+            </div>
             <div class="o-layout  o-layout--middle  o-layout--flush  c-accordion-nav__layout">
               <div class="o-layout__item  u-1/2@desktop  c-carousel__item">
                 {% if block.asset | length %}
