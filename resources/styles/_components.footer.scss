@@ -7,7 +7,7 @@
 
   .c-footer__content {
     border-top: 1px solid color(light-grey);
-    padding-bottom: $unit-small;
+    padding-bottom: 10px;
     padding-top: $unit-small;
     text-align: right;
 
@@ -25,7 +25,7 @@
     .c-footer__credit {
       color: color(grey);
       display: inline-block;
-      height: 14px;
+      height: 15px;
       overflow: hidden;
       position: relative;
       width: 100%;

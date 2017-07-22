@@ -21,7 +21,7 @@
       }
 
     .c-accordion-nav__content {
-      height: 600px;
+      height: 100%;
       transition: all .6s .3s;
     }
 
@@ -66,11 +66,11 @@
           display: inline-block;
           transition: transform .3s;
           transform: translateX(0);
-          user-select: none;
+          // user-select: none;
         }
 
         .c-accordion-nav__content {
-          background-color: color(dark-grey);
+          background-color: #222;
           color: color(white);
           height: 0;
           overflow: hidden;
@@ -82,10 +82,19 @@
             height: 100%;
           }
 
+          .c-accordion-nav__layout {
+            // height: 600px;
+          }
+
           .c-accordion-nav__details {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.75);
             height: 100%;
-            padding: $unit-large;
+            min-height: 460px;
+            padding: $unit-large * 1.5  $unit-large;
+
+            @include mq($from: desktop) {
+              min-height: 600px;
+            }
           }
 
         .c-accordion-nav__status {

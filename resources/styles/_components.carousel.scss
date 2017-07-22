@@ -11,3 +11,36 @@
     background-size: cover;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
   }
+
+    .c-carousel__item {
+      margin: 0;
+    }
+
+  .c-carousel__asset {
+    padding: $unit-large;
+  }
+
+  .c-carousel__prev,
+  .c-carousel__next {
+    cursor: pointer;
+    height: 100%;
+    padding: 0 $unit-small * 1.5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .2s;
+    width: auto;
+    @include font-size(24px);
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .c-carousel__prev {
+    left: 0;
+  }
+
+  .c-carousel__next {
+    right: 0;
+  }
