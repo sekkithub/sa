@@ -16,8 +16,8 @@ function carouselsInit() {
       touchThreshold: 10,
       slide: '.js-carousel-slide',
       draggable: false,
-      prevArrow: '.js-carousel-prev',
-      nextArrow: '.js-carousel-next',
+      // prevArrow: '.js-carousel-prev',
+      // nextArrow: '.js-carousel-next',
     });
   });
 }

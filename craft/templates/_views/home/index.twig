@@ -9,14 +9,16 @@
 
   {% include '_components/about' %}
 
+  <section>
     <ul class="o-list-bare  c-accordion-nav">
+      {% for menu in craft.entries.section('entries').level(1) %}
       <li class="c-accordion-nav__item  js-accordion-nav-item">
         <div class="o-wrapper  o-wrapper--huge  c-accordion-nav__spacer">
           <div class="c-accordion-nav__underline"></div>
         </div>
         <div class="o-wrapper  o-wrapper--huge">
           <div class="c-accordion-nav__clickable-area  js-accordion-nav-opener  u-flex  u-flex--space-between">
-            <h2 class="o-heading  c-accordion-nav__heading  u-margin-bottom-none">Work</h2>
+            <h2 class="o-heading  c-accordion-nav__heading  u-margin-bottom-none">{{ menu.title }}</h2>
             <div class="c-accordion-nav__status">
               <span class="c-accordion-nav__plus"></span>
             </div>
@@ -25,24 +27,32 @@
 
 
         <div class="c-accordion-nav__content  c-carousel  js-carousel">
-          {% for block in entry.works %}
-          <div class="c-carousel__slide  js-carousel-slide"{% if block.backdropImage | length %} style="background-image: url({{ block.backdropImage.first().getUrl() }});"{% endif %}>
-            <div class="c-carousel__pagination">
-              {{ loop.index }} / {{ loop.length }}
-            </div>
+          {% for entry in menu.getChildren() %}
+          <div class="c-carousel__slide  js-carousel-slide"{% if entry.backdropImage | length %} style="background-image: url({{ entry.backdropImage.first().getUrl() }});"{% endif %}>
+            <div class="c-carousel__pagination">{{ loop.index }} / {{ loop.length }}</div>
             <div class="o-layout  o-layout--middle  o-layout--flush  c-accordion-nav__layout">
               <div class="o-layout__item  u-1/2@desktop  c-carousel__item">
-                {% if block.asset | length %}
-                <div class="c-carousel__asset  js-carousel-asset">
-                  <img src="{{ block.asset.first().getUrl() }}" />
-                </div>
+                {% if entry.media | length %}
+                  <div class="c-carousel__asset  js-carousel-asset">
+                    {% for block in entry.media %}
+                      {% if block.type == "image" %}
+                        <img src="{{ block.asset.first().getUrl() }}" />
+                      {% elseif block.type == "youtube" %}
+                        <iframe src="https://www.youtube.com/embed/JoQOWB9gDWE" width="100%" frameborder="0" allowfullscreen></iframe>
+                      {% elseif block.type == "vimeo" %}
+                        <iframe src="https://player.vimeo.com/video/226199475" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
                 {% endif %}
               </div>
               <div class="o-layout__item  c-accordion-nav__layout-item  c-carousel__item  u-1/2@desktop">
+                {% if entry.body | length %}
                 <div class="c-accordion-nav__details  js-accordion-nav-details">
-                  <h1 class="o-heading">{{ block.heading }}</h1>
-                  <div class="o-copy">{{ block.body }}</div>
+                  <h1 class="o-heading">{{ entry.title }}</h1>
+                  <div class="o-copy">{{ entry.body }}</div>
                 </div>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -56,62 +66,9 @@
           </div>
         </div>
       </li>
-
-      <li class="c-accordion-nav__item  js-accordion-nav-item">
-        <div class="o-wrapper  o-wrapper--huge  c-accordion-nav__spacer">
-          <div class="c-accordion-nav__underline"></div>
-        </div>
-        <div class="o-wrapper  o-wrapper--huge">
-          <div class="c-accordion-nav__clickable-area  js-accordion-nav-opener">
-            <h2 class="o-heading  c-accordion-nav__heading  u-margin-bottom-none">Recent</h2>
-          </div>
-        </div>
-
-        <div class="c-accordion-nav__content">
-          <div class="o-wrapper  o-wrapper--huge">
-            <div class="o-copy  c-accordion-nav__copy">
-              <p>
-                With two EP's on Where To Now?, releases on NOORDEN & sister label LL.M, and the mysterious VA Soundscape Versions, Joshua Reid and Joshua Inyang, aka Space Afrika have crafted a conceptual framemork operating in and around the world of ambient, experimental and dub techno. Their productions employing a drifting balance of scorched soundscapes, field recordings and rolling dubbed out dread have led to what can breifly be described as a soundscape driven, textural commidity. One that is growing ever potent alongside their developing catalogue of music.<br />
-        <br />
-                Inspired by the industrial architecture in the North West, more specifically Manchester, the pair who dabble in the world of electronics and have built a fully analogue set up (which over the past year and a half they have taken across Europe) are flexible to cater for the club or cafeteria. <br />
-        <br />
-                More recently they have progressed to become residents of NTS Radio, displaying a broad and imaginative approach in collating music, and creating a haven for the unusual, left of field, and otherly body controlling sounds. <br />
-        <br />
-                They also host a show on Manchester's Reform Radio fortnightly, taking the reigns on Ruf Dug's 'The Dream Sequence'. Doing so, they have used the opportunity to not only share their weird and wonderful taste for provocative music, but to exhibit and collaborate with other local DJ's and artists.
-              </p>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li class="c-accordion-nav__item  js-accordion-nav-item">
-        <div class="o-wrapper  o-wrapper--huge  c-accordion-nav__spacer">
-          <div class="c-accordion-nav__underline"></div>
-        </div>
-        <div class="o-wrapper  o-wrapper--huge">
-          <div class="c-accordion-nav__clickable-area  js-accordion-nav-opener">
-            <h2 class="o-heading  c-accordion-nav__heading  u-margin-bottom-none">Future</h2>
-          </div>
-        </div>
-
-        <div class="c-accordion-nav__content">
-          <div class="o-wrapper  o-wrapper--huge">
-            <div class="o-copy  c-accordion-nav__copy">
-              <p>
-                With two EP's on Where To Now?, releases on NOORDEN & sister label LL.M, and the mysterious VA Soundscape Versions, Joshua Reid and Joshua Inyang, aka Space Afrika have crafted a conceptual framemork operating in and around the world of ambient, experimental and dub techno. Their productions employing a drifting balance of scorched soundscapes, field recordings and rolling dubbed out dread have led to what can breifly be described as a soundscape driven, textural commidity. One that is growing ever potent alongside their developing catalogue of music.<br />
-        <br />
-                Inspired by the industrial architecture in the North West, more specifically Manchester, the pair who dabble in the world of electronics and have built a fully analogue set up (which over the past year and a half they have taken across Europe) are flexible to cater for the club or cafeteria. <br />
-        <br />
-                More recently they have progressed to become residents of NTS Radio, displaying a broad and imaginative approach in collating music, and creating a haven for the unusual, left of field, and otherly body controlling sounds. <br />
-        <br />
-                They also host a show on Manchester's Reform Radio fortnightly, taking the reigns on Ruf Dug's 'The Dream Sequence'. Doing so, they have used the opportunity to not only share their weird and wonderful taste for provocative music, but to exhibit and collaborate with other local DJ's and artists.
-              </p>
-            </div>
-          </div>
-        </div>
-      </li>
-
+      {% endfor %}
     </ul>
+  </section>
 
   {% include '_components/contact' %}
 

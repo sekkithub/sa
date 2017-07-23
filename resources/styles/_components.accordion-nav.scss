@@ -91,6 +91,7 @@
             height: 100%;
             min-height: 460px;
             padding: $unit-large * 1.5  $unit-large;
+            user-select: text;
 
             @include mq($from: desktop) {
               min-height: 600px;
