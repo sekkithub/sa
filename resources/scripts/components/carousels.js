@@ -7,7 +7,6 @@ function carouselsInit() {
 
   $carousels.each((i, el) => {
     $(el).not('.slick-initialized').slick({
-      arrows: true,
       dots: true,
       fade: true,
       adaptiveHeight: true,
@@ -16,8 +15,6 @@ function carouselsInit() {
       touchThreshold: 10,
       slide: '.js-carousel-slide',
       draggable: false,
-      // prevArrow: '.js-carousel-prev',
-      // nextArrow: '.js-carousel-next',
     });
   });
 }
