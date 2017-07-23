@@ -14,14 +14,20 @@
   }
 
     .c-carousel__pagination {
+      background-color: color(black);
       position: absolute;
       border: 1px solid color(white);
       padding: 0 $unit-small * 1.5;
-      right: $unit-large + 2;
+      right: $unit;
       text-align: center;
       top: $unit;
       min-width: 68px;
+      z-index: 100;
       @include font-size(14px, 1.6);
+
+      @include mq($from: tablet) {
+        right: $unit-large + 2;
+      }
     }
 
     .c-carousel__item {
@@ -29,15 +35,18 @@
     }
 
   .c-carousel__asset {
-    padding: $unit-large * 1.5 $unit-large $unit-large;
-
     @include mq($from: desktop) {
       padding: $unit-large;
     }
   }
 
     .c-carousel__asset img {
+      width: 100%;
       margin: 0 auto;
+
+      @include mq($from: tablet) {
+        width: auto;
+      }
     }
 
   .c-carousel__prev,
