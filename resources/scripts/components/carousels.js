@@ -7,14 +7,20 @@ function carouselsInit() {
 
   $carousels.each((i, el) => {
     $(el).not('.slick-initialized').slick({
-      dots: true,
+      dots: false,
       fade: true,
-      adaptiveHeight: true,
       slidesToShow: 1,
       lazyLoad: 'progressive',
       touchThreshold: 10,
       slide: '.js-carousel-slide',
       draggable: false,
+      prevArrow: '.js-carousel-prev',
+      nextArrow: '.js-carousel-next',
+    });
+
+    $(el).on('beforeChange', (event, slick, currentSlide, nextSlide) => {
+      const nextHeight = $(`.js-carousel-slide[data-slick-index="${nextSlide}"]`).height();
+      $(el).parent('.js-accordion-nav-content').css('height', nextHeight);
     });
   });
 }

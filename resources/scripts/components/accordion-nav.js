@@ -6,11 +6,11 @@ function openNav() {
 
   if ($selectedItem.hasClass('active')) {
     $selectedItem.removeClass('active');
-    // $selectedItem.find('.js-carousel').css('min-height', 0);
+    $selectedItem.find('.js-accordion-nav-content').css('height', 0);
   } else {
     $selectedItem.addClass('active');
-    // const activeCarouselHeight = $selectedItem.find('.slick-active').height();
-    // $selectedItem.find('.js-carousel').css('min-height', activeCarouselHeight);
+    const activeCarouselHeight = $selectedItem.find('.slick-active').height();
+    $selectedItem.find('.js-accordion-nav-content').css('height', activeCarouselHeight);
   }
 }
 

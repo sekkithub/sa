@@ -15,48 +15,50 @@
       </div>
 
 
-      <div class="c-accordion-nav__content  c-carousel  js-carousel">
-        {% for entry in menu.getChildren() %}
-        <div class="c-carousel__slide  js-carousel-slide"{% if entry.backdropImage | length %} style="background-image: url({{ entry.backdropImage.first().getUrl() }});"{% endif %}>
-          <div class="c-carousel__pagination">{{ loop.index }} / {{ loop.length }}</div>
-          <div class="o-layout  o-layout--middle  o-layout--flush  c-accordion-nav__layout">
-            <div class="o-layout__item  u-1/2@desktop  c-carousel__item">
-              {% if entry.media | length %}
-                <div class="c-carousel__asset  js-carousel-asset">
-                  {% for block in entry.media %}
-                    {% if block.type == "image" %}
-                      <img src="{{ block.asset.first().getUrl() }}" />
-                    {% elseif block.type == "youtube" %}
-                      <div class="c-video">
-                        <iframe src="https://www.youtube.com/embed/JoQOWB9gDWE" width="100%" frameborder="0" allowfullscreen></iframe>
-                      </div>
-                    {% elseif block.type == "vimeo" %}
-                      <div class="c-video">
-                        <iframe src="https://player.vimeo.com/video/226199475" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              {% endif %}
-            </div>
-            <div class="o-layout__item  c-accordion-nav__layout-item  c-carousel__item  u-1/2@desktop">
-              {% if entry.body | length %}
-              <div class="c-accordion-nav__details  js-accordion-nav-details">
-                <h1 class="o-heading">{{ entry.title }}</h1>
-                <div class="o-copy">{{ entry.body }}</div>
+      <div class="c-accordion-nav__content  js-accordion-nav-content">
+        <div class="c-carousel  js-carousel">
+          {% for entry in menu.getChildren() %}
+          <div class="c-carousel__slide  js-carousel-slide"{% if entry.backdropImage | length %} style="background-image: url({{ entry.backdropImage.first().getUrl() }});"{% endif %}>
+            <div class="c-carousel__pagination">{{ loop.index }} / {{ loop.length }}</div>
+            <div class="o-layout  o-layout--middle  o-layout--flush  c-accordion-nav__layout">
+              <div class="o-layout__item  u-1/2@desktop  c-carousel__item">
+                {% if entry.media | length %}
+                  <div class="c-carousel__asset  js-carousel-asset">
+                    {% for block in entry.media %}
+                      {% if block.type == "image" %}
+                        <img src="{{ block.asset.first().getUrl() }}" />
+                      {% elseif block.type == "youtube" %}
+                        <div class="c-video">
+                          <iframe src="{{ block.linkUrl }}" width="100%" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      {% elseif block.type == "vimeo" %}
+                        <div class="c-video">
+                          <iframe src="https://player.vimeo.com/video/226199475" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
               </div>
-              {% endif %}
+              <div class="o-layout__item  c-accordion-nav__layout-item  c-carousel__item  u-1/2@desktop">
+                {% if entry.body | length %}
+                <div class="c-accordion-nav__details  js-accordion-nav-details">
+                  <h1 class="o-heading">{{ entry.title }}</h1>
+                  <div class="o-copy">{{ entry.body }}</div>
+                </div>
+                {% endif %}
+              </div>
             </div>
           </div>
-        </div>
-        {% endfor %}
+          {% endfor %}
 
-        <!-- <div class="c-carousel__prev  js-carousel-prev  u-flex  u-flex--center-middle">
-          <i class="btr bt-angle-left"></i>
+          <!-- <div class="c-carousel__prev  js-carousel-prev  u-flex  u-flex--center-middle">
+            <i class="btr bt-angle-left"></i>
+          </div>
+          <div class="c-carousel__next  js-carousel-next  u-flex  u-flex--center-middle">
+            <i class="btr bt-angle-right"></i>
+          </div> -->
         </div>
-        <div class="c-carousel__next  js-carousel-next  u-flex  u-flex--center-middle">
-          <i class="btr bt-angle-right"></i>
-        </div> -->
       </div>
     </li>
     {% endfor %}

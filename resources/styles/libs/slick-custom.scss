@@ -13,6 +13,10 @@
   background: url('/images/loader.svg') no-repeat center center;
 }
 
+.slick-slide {
+  outline: none !important;
+}
+
 .slick-arrow {
   background-color: transparent;
   background-repeat: no-repeat;
@@ -21,23 +25,4 @@
   width: 28px;
   height: 51px;
   outline: none;
-}
-
-.slick-dots {
-  bottom: -36px;
-}
-
-.slick-dots li button:before {
-  color: color(black);
-  font-family: inherit;
-  font-size: 40px !important;
-}
-
-.slick-dots li:hover button:before {
-  color: color(black);
-}
-
-.slick-dots li.slick-active button:before {
-  color: color(black);
-  opacity: 1;
 }
