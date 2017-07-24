@@ -6,17 +6,17 @@ const $carousels = $('.js-carousel');
 
 function carouselsInit() {
   $carousels.each((i, el) => {
-    $(el).not('.slick-initialized').slick({
+    $(el).slick({
       dots: false,
       fade: true,
-      // adaptiveHeight: true,
+      adaptiveHeight: true,
       slidesToShow: 1,
       lazyLoad: 'progressive',
       touchThreshold: 10,
       slide: '.js-carousel-slide',
       draggable: false,
-      prevArrow: '.js-carousel-prev',
-      nextArrow: '.js-carousel-next',
+      prevArrow: $(el).find('.js-carousel-prev'),
+      nextArrow: $(el).find('.js-carousel-next'),
     });
 
     $(el).on('beforeChange', (event, slick, currentSlide, nextSlide) => {
@@ -24,28 +24,28 @@ function carouselsInit() {
       const nextSlideHeight = $nextSlide.height();
       $(el).parent('.js-accordion-nav-content').height(nextSlideHeight);
       $nextSlide.find('.js-carousel-right-item').height(nextSlideHeight);
-      // console.log(nextSlideHeight);
+      console.log(nextSlideHeight);
     });
+  });
+}
 
-    function setHeight() {
-      if ($(el).closest('.js-accordion-nav-item').hasClass('active')) {
-        const currentSlideIndex = $(el).slick('slickCurrentSlide');
-        const $currentSlide = $(`.js-carousel-slide[data-slick-index="${currentSlideIndex}"]`);
-        const currentSlideHeight = $currentSlide.height();
-        $(el).parent('.js-accordion-nav-content').height(currentSlideHeight);
-        $currentSlide.find('.js-carousel-right-item').height(currentSlideHeight);
-        console.log(currentSlideHeight);
-      }
+function setHeight() {
+  $carousels.each((i, el) => {
+    if ($(el).closest('.js-accordion-nav-item').hasClass('active')) {
+      const currentSlideIndex = $(el).slick('slickCurrentSlide');
+      const $currentSlide = $(`.js-carousel-slide[data-slick-index="${currentSlideIndex}"]`);
+      const currentSlideHeight = $currentSlide.height();
+      $(el).parent('.js-accordion-nav-content').height(currentSlideHeight);
+      $currentSlide.find('.js-carousel-right-item').height(currentSlideHeight);
+      // console.log(currentSlideHeight);
     }
-
-    $(window).resize(setHeight);
   });
 }
 
 function init() {
   carouselsInit();
 
-  // $(window).resize(setHeight);
+  $(window).resize(setHeight);
   // $(window).on('orientationchange', setHeight);
 }
 

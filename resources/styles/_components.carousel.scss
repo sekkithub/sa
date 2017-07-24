@@ -10,6 +10,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding-top: $unit-large;
     position: relative;
   }
 
@@ -20,7 +21,7 @@
       padding: 0 $unit-small * 1.5;
       right: $unit;
       text-align: center;
-      top: $unit;
+      top: $unit-large * 1.5;
       min-width: 68px;
       z-index: 100;
       @include font-size(14px, 1.6);
@@ -49,24 +50,32 @@
       }
     }
 
+  .c-carousel__controller {
+    border-bottom: 1px solid color(white);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+
   .c-carousel__prev,
   .c-carousel__next {
+    background-color: color(black);
     cursor: pointer;
     height: 100%;
-    padding: 0 $unit-small * 1.5;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    padding: $unit-small;
+    text-align: center;
     transition: all .2s;
-    width: auto;
-    @include font-size(24px);
+    width: 100%;
+    @include font-size(15px);
 
     &:hover {
-      opacity: 0.5;
+      background-color: color(dark-grey);
     }
   }
 
   .c-carousel__prev {
+    border-right: 1px solid color(white);
     left: 0;
   }
 
