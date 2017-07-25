@@ -1,12 +1,13 @@
 import $ from 'jquery';
 import ee from './ee';
 
-// function setHeight() {
-//   if ($selectedItem.hasClass('active')) {
-//     const activeCarouselHeight = $selectedItem.find('.slick-active').height();
-//     $selectedItem.find('.js-accordion-nav-content').css('height', activeCarouselHeight);
-//   }
-// }
+function setHeight() {
+  $('.js-accordion-nav-item.active').each((i, el) => {
+    const activeCarouselHeight = $(el).find('.js-carousel-slide.slick-active').height();
+    const carouselNavHeight = 41;
+    $(el).find('.js-accordion-nav-content').height(activeCarouselHeight + carouselNavHeight);
+  });
+}
 
 function openNav() {
   const $selectedItem = $(this).closest('.js-accordion-nav-item');
@@ -15,16 +16,17 @@ function openNav() {
     $selectedItem.find('.js-accordion-nav-content').css('height', 0);
   } else {
     $selectedItem.addClass('active');
-    const activeCarouselHeight = $selectedItem.find('.slick-active').height();
-    $selectedItem.find('.js-accordion-nav-content').css('height', activeCarouselHeight);
   }
+}
+
+function draw() {
+  requestAnimationFrame(draw);
+  setHeight();
 }
 
 function init() {
   $(document).off().on('click', '.js-accordion-nav-opener', openNav);
-  // setHeight();
-  // $(window).resize(setHeight);
-  // $(window).on('orientationchange', setHeight);
+  draw();
 }
 
 ee.addListener('init', init);

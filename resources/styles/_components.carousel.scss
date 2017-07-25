@@ -10,7 +10,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-top: $unit-large;
+    padding-top: 41px;
     position: relative;
   }
 
@@ -21,7 +21,7 @@
       padding: 0 $unit-small * 1.5;
       right: $unit;
       text-align: center;
-      top: $unit-large * 1.5;
+      top: 64px;
       min-width: 68px;
       z-index: 100;
       @include font-size(14px, 1.6);
@@ -48,6 +48,10 @@
       @include mq($from: tablet) {
         width: auto;
       }
+
+      @include mq($from: desktop) {
+        max-height: 40vw;
+      }
     }
 
   .c-carousel__controller {
@@ -63,11 +67,12 @@
     background-color: color(black);
     cursor: pointer;
     height: 100%;
-    padding: $unit-small;
+    padding: 8px;
     text-align: center;
+    text-transform: uppercase;
     transition: all .2s;
     width: 100%;
-    @include font-size(15px);
+    @include font-size(13px);
 
     &:hover {
       background-color: color(dark-grey);
