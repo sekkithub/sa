@@ -65,6 +65,7 @@ $mq-breakpoints: (
 
 
 // COMPONENTS
+@import "components.preloader";
 @import "components.header";
 @import "components.container";
 @import "components.button";

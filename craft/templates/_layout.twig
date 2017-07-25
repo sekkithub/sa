@@ -8,6 +8,7 @@
 </head>
 
 <body data-section="{{ (entry.section is defined and entry.section.handle is defined) ? entry.section.handle : 'generic' }}">
+  {% include '_components/preloader' %}
   {% include '_components/header' %}
   <div id="c-scrollbar" class="c-container  js-container" scrollbar  data-scrollbar>
     {% block content %}
