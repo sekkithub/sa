@@ -1,6 +1,6 @@
 <div class="c-about">
   <div class="o-wrapper  o-wrapper--huge">
-    <div class="c-about__body  js-about-body">
+    <div class="c-about__body  js-about-body{% if craft.lj_mobiledetect.type == "phone" or craft.lj_mobiledetect.type == "tablet" %}  active{% endif %}"{% if craft.lj_mobiledetect.type == "phone" or craft.lj_mobiledetect.type == "tablet" %} style="height: 100%;"{% endif %}>
       <div class="o-copy  js-about-copy">{{ entry.about }}</div>
       <div class="c-about__gradient"></div>
     </div>
