@@ -1,0 +1,30 @@
+<li class="c-accordion-nav__item  js-accordion-nav-item">
+  <div class="o-wrapper  o-wrapper--huge  c-accordion-nav__spacer">
+    <div class="c-accordion-nav__underline"></div>
+  </div>
+  <div class="o-wrapper  o-wrapper--huge">
+    <div class="c-accordion-nav__clickable-area  js-accordion-nav-opener  u-flex  u-flex--space-between">
+      <h2 class="o-heading  c-accordion-nav__heading  u-margin-bottom-none">Future &frasl; Current</h2>
+      <div class="c-accordion-nav__status">
+        <span class="c-accordion-nav__plus"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-accordion-nav__content  js-accordion-nav-content">
+    <div class="o-wrapper  o-wrapper--huge">
+      <div class="js-carousel">
+        <div class="js-carousel-slide"{% if entry.backdropImage | length %} style="background-image: url({{ entry.backdropImage.first().getUrl() }});"{% endif %}>
+          <div class="c-future-current  js-accordion-nav-details">
+            {% for entry in craft.entries.section('futureCurrent') %}
+              <div class="c-future-current__item  u-constrain--tiny">
+                <h1 class="o-heading  o-heading--bold">{{ entry.title }}</h1>
+                <div class="o-copy">{{ entry.body }}</div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>

@@ -1,0 +1,15 @@
+/* =======================
+   Components/Future Current
+   ======================= */
+.c-future-current {
+  padding: $unit-large 0;
+
+  @include mq($from: desktop) {
+    padding: $unit-huge 0;
+  }
+}
+
+  .c-future-current__item {
+    margin-bottom: $unit-large;
+    @include hide_last_margin;
+  }
