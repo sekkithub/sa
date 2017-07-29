@@ -54,6 +54,7 @@
         cursor: pointer;
         padding-bottom: $unit-small;
         padding-top: $unit-small;
+        text-transform: uppercase;
 
         &:hover .c-accordion-nav__heading {
           transform: translateX(10px);
@@ -91,6 +92,7 @@
           .c-accordion-nav__details {
             min-height: 50vw;
             padding: $unit-large $unit;
+            position: relative;
             user-select: text;
 
             @include mq($from: tablet) {

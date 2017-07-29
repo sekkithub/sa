@@ -19,8 +19,7 @@
         <div class="c-carousel  js-carousel">
           {% for entry in menu.getChildren() %}
           <div class="c-carousel__slide  js-carousel-slide"{% if entry.backdropImage | length %} style="background-image: url({{ entry.backdropImage.first().getUrl() }});"{% endif %}>
-            <div class="c-carousel__pagination">{{ loop.index }} / {{ loop.length }}</div>
-            <div class="o-layout  o-layout--middle  o-layout--flush  c-accordion-nav__layout">
+            <div class="o-layout  o-layout--middle  o-layout--flush  o-layout--reverse  c-accordion-nav__layout">
               <div class="o-layout__item  u-1/2@desktop  c-carousel__item">
                 {% if entry.media | length %}
                   <div class="c-carousel__asset  js-carousel-asset">
@@ -43,6 +42,14 @@
               <div class="o-layout__item  c-accordion-nav__layout-item  c-carousel__item  u-1/2@desktop  js-carousel-right-item">
                 {% if entry.body | length %}
                 <div class="c-accordion-nav__details  js-accordion-nav-details">
+                  <div class="c-carousel__controller  u-flex  u-flex--space-between">
+                    <div class="c-carousel__pagination">{{ loop.index }} / {{ loop.length }}</div>
+                    <div class="u-flex  u-flex--space-between">
+                      <div class="c-carousel__prev  js-carousel-prev">Prev</div>
+                      <span class="c-carousel__slash">&frasl;</span>
+                      <div class="c-carousel__next  js-carousel-next">Next</div>
+                    </div>
+                  </div>
                   <h1 class="o-heading">{{ entry.title }}</h1>
                   <div class="o-copy">{{ entry.body }}</div>
                 </div>
@@ -51,15 +58,6 @@
             </div>
           </div>
           {% endfor %}
-
-          <div class="c-carousel__controller  u-flex  u-flex--space-between">
-            <div class="c-carousel__prev  js-carousel-prev">
-              Prev
-            </div>
-            <div class="c-carousel__next  js-carousel-next">
-              Next
-            </div>
-          </div>
         </div>
       </div>
     </li>

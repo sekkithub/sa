@@ -4,8 +4,7 @@ import ee from './ee';
 function setHeight() {
   $('.js-accordion-nav-item.active').each((i, el) => {
     const activeCarouselHeight = $(el).find('.js-carousel-slide.slick-active').height();
-    const carouselNavHeight = 41;
-    $(el).find('.js-accordion-nav-content').height(activeCarouselHeight + carouselNavHeight);
+    $(el).find('.js-accordion-nav-content').height(activeCarouselHeight);
   });
 }
 
