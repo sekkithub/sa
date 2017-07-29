@@ -23,6 +23,10 @@
     }
 
     &:hover {
-      color: color(grey);
+      opacity: 0.5;
     }
   }
+
+    .c-social__image {
+      padding-bottom: 2px;
+    }

@@ -59,6 +59,7 @@
     text-align: center;
     text-transform: uppercase;
     transition: all .2s;
+    @include font-size(15px);
 
     &:hover {
       border-color: color(white);
