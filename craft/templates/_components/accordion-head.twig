@@ -1,0 +1,13 @@
+<div class="o-wrapper  o-wrapper--huge  c-accordion-nav__spacer">
+  <div class="c-accordion-nav__underline"></div>
+</div>
+<div class="o-wrapper  o-wrapper--huge">
+  {% if linkUrl is defined %}<a href="{{ linkUrl }}" class="c-accordion-nav__link">{% endif %}
+    <div class="c-accordion-nav__clickable-area  js-accordion-nav-opener  u-flex  u-flex--space-between">
+      <h2 class="o-heading  c-accordion-nav__heading  u-margin-bottom-none">{{ heading }}</h2>
+      <div class="c-accordion-nav__status">
+        <span class="c-accordion-nav__plus"></span>
+      </div>
+    </div>
+  {% if linkUrl is defined %}</a>{% endif %}
+</div>

@@ -61,6 +61,10 @@
         }
       }
 
+        .c-accordion-nav__link {
+          text-decoration: inherit;
+        }
+
         .c-accordion-nav__heading {
           backface-visibility: hidden;
           display: inline-block;

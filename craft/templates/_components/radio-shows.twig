@@ -1,16 +1,5 @@
 <li class="c-accordion-nav__item  js-accordion-nav-item">
-  <div class="o-wrapper  o-wrapper--huge  c-accordion-nav__spacer">
-    <div class="c-accordion-nav__underline"></div>
-  </div>
-  <div class="o-wrapper  o-wrapper--huge">
-    <div class="c-accordion-nav__clickable-area  js-accordion-nav-opener  u-flex  u-flex--space-between">
-      <h2 class="o-heading  c-accordion-nav__heading  u-margin-bottom-none">Radio Shows</h2>
-      <div class="c-accordion-nav__status">
-        <span class="c-accordion-nav__plus"></span>
-      </div>
-    </div>
-  </div>
-
+  {% include '_components/accordion-head' with { heading: 'Radio Shows' } %}
 
   <div class="c-accordion-nav__content  js-accordion-nav-content">
     <div class="c-carousel  js-carousel">
@@ -26,10 +15,6 @@
                   {% elseif block.type == "youtube" %}
                     <div class="c-video">
                       <iframe src="{{ block.linkUrl }}" width="100%" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  {% elseif block.type == "vimeo" %}
-                    <div class="c-video">
-                      <iframe src="https://player.vimeo.com/video/226199475" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                   {% endif %}
                 {% endfor %}
@@ -49,7 +34,7 @@
               </div>
               <h1 class="o-heading  o-heading--bold">{{ entry.title }}</h1>
               <div class="o-copy">
-                <span>ON AIR &#45; {{ entry.date }}</span> 
+                <span>ON AIR &#45; {{ entry.date }}</span>
               </div>
               <div class="o-copy">{{ entry.body }}</div>
 
