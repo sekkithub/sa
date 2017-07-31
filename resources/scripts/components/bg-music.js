@@ -27,7 +27,7 @@ function toggleBgMusic() {
 }
 
 function addHandlers() {
-  $(document).on('click', '.js-toggle-bg-music', toggleBgMusic);
+  $(document).on('click', '.js-bg-music-control', toggleBgMusic);
 }
 
 function init() {
