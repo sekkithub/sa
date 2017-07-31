@@ -1,0 +1,20 @@
+/* =======================
+   Components/Background Music
+   ======================= */
+.c-bg-music {
+
+}
+
+.c-bg-music-controller {
+  background-color: grey;
+  bottom: $unit-small;
+  cursor: pointer;
+  height: 20px;
+  position: fixed;
+  right: $unit-huge;
+  width: 20px;
+  z-index: 10;
+}
+
+.c-bg-music-controller span {
+}

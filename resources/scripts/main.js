@@ -8,6 +8,7 @@ import './components/accordion-nav';
 import './components/carousels';
 import './components/preloader';
 // import './components/smooth-scrollbar';
+import './components/bg-music';
 
 FastClick.attach(document.body);
 
