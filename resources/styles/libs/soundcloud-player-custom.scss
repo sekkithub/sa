@@ -1,0 +1,14 @@
+/* =======================
+   Soundcloud embed Custom Style
+   ======================= */
+
+@import "../settings.colors";
+@import "../tools.color";
+
+.soundContainer {
+  display: none !important;
+}
+
+.title__line {
+  color: color(white) !important;
+}

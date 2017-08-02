@@ -13,6 +13,7 @@ $bt-font-path: '/fonts/black-tie/fonts';
 @import "libs/slick-custom.scss";
 @import "../../node_modules/plyr/src/scss/plyr.scss";
 @import "../../node_modules/smooth-scrollbar/dist/smooth-scrollbar.css";
+@import "libs/soundcloud-player-custom.scss";
 
 
 // TOOLS
@@ -62,6 +63,7 @@ $mq-breakpoints: (
 @import "../../node_modules/inuitcss/objects/objects.block";
 @import "objects.heading";
 @import "objects.copy";
+@import "objects.permalink";
 
 
 // COMPONENTS
@@ -76,6 +78,7 @@ $mq-breakpoints: (
 @import "components.future-current";
 @import "components.carousel";
 @import "components.video";
+@import "components.soundcloud-player";
 @import "components.contact";
 @import "components.footer";
 
