@@ -9,6 +9,10 @@ import './components/carousels';
 import './components/preloader';
 // import './components/smooth-scrollbar';
 import './components/bg-music';
+import './components/mixcloud-player';
+
+import './libs/soundcloud.player.api';
+import './libs/sc-player';
 
 FastClick.attach(document.body);
 

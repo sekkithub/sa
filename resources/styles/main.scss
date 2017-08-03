@@ -13,7 +13,7 @@ $bt-font-path: '/fonts/black-tie/fonts';
 @import "libs/slick-custom.scss";
 @import "../../node_modules/plyr/src/scss/plyr.scss";
 @import "../../node_modules/smooth-scrollbar/dist/smooth-scrollbar.css";
-@import "libs/soundcloud-player-custom.scss";
+@import "libs/sc-player-minimal.scss";
 
 
 // TOOLS
@@ -64,6 +64,7 @@ $mq-breakpoints: (
 @import "objects.heading";
 @import "objects.copy";
 @import "objects.permalink";
+@import "objects.mixcloud-iframe";
 
 
 // COMPONENTS
