@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
-    <title>iconmonstr-video-15</title>
+    <title>play</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="iconmonstr-video-15" fill-rule="nonzero" fill="#FFFFFF">
-            <path d="M15,2.5 C21.8925,2.5 27.5,8.1075 27.5,15 C27.5,21.8925 21.8925,27.5 15,27.5 C8.1075,27.5 2.5,21.8925 2.5,15 C2.5,8.1075 8.1075,2.5 15,2.5 Z M15,0 C6.71625,0 0,6.71625 0,15 C0,23.28375 6.71625,30 15,30 C23.28375,30 30,23.28375 30,15 C30,6.71625 23.28375,0 15,0 Z M11.25,21.25 L11.25,8.75 L22.5,15.1825 L11.25,21.25 Z" id="Shape"></path>
+        <g id="play" fill-rule="nonzero" fill="#FFFFFF">
+            <path d="M15,1.75 C22.30605,1.75 28.25,7.69395 28.25,15 C28.25,22.30605 22.30605,28.25 15,28.25 C7.69395,28.25 1.75,22.30605 1.75,15 C1.75,7.69395 7.69395,1.75 15,1.75 Z M15,0 C6.71625,0 0,6.71625 0,15 C0,23.28375 6.71625,30 15,30 C23.28375,30 30,23.28375 30,15 C30,6.71625 23.28375,0 15,0 Z M12,20.4166667 L12,9.58333333 L21.75,15.1581667 L12,20.4166667 Z" id="Shape"></path>
         </g>
     </g>
 </svg>
