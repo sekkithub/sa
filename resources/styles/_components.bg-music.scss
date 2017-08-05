@@ -11,13 +11,21 @@
   border: 1px solid color(dark-grey);
   color: color(dark-grey);
   cursor: pointer;
+  opacity: 0;
   padding: 2px 22px;
   position: fixed;
-  transition: all .2s;
+  transition: all .4s .8s;
   right: $unit-large;
   user-select: none;
+  visibility: hidden;
   z-index: 10;
   @include font-size(14px);
+}
+
+body.isLoaded .c-bg-music-control {
+  transition-delay: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 body.muted-bg-mucic .c-bg-music-control {
@@ -29,38 +37,38 @@ body.muted-bg-mucic .c-bg-music-control span {
 }
 
 
-#bars {
+.c-bg-music-control__bars {
   display: inline-block;
   height: 12px;
   position: relative;
   width: 16px;
 }
 
-.bar {
-  animation: soundwave 0ms -800ms linear infinite alternate;
-  background-color: color(dark-grey);
-  bottom: 0;
-  transition: all .4s;
-  position: absolute;
-  width: 2px;
-}
-
-body.muted-bg-mucic .bar {
-  animation: inherit;
-  background-color: color(grey);
-  height: 1px !important;
-}
-
-@keyframes soundwave {
-  0% {
-    height: 3px;
+  .c-bg-music-control__bar {
+    animation: soundwave 0ms -800ms linear infinite alternate;
+    background-color: color(dark-grey);
+    bottom: 0;
+    transition: all .4s;
+    position: absolute;
+    width: 2px;
   }
-  100% {
-    height: 12px;
-  }
-}
 
-.bar:nth-child(1)  { left: 1px; animation-duration: 474ms; }
-.bar:nth-child(2)  { left: 5px; animation-duration: 433ms; }
-.bar:nth-child(3)  { left: 9px; animation-duration: 407ms; }
-.bar:nth-child(4)  { left: 13px; animation-duration: 458ms; }
+  body.muted-bg-mucic .c-bg-music-control__bar {
+    animation: inherit;
+    background-color: color(grey);
+    height: 1px !important;
+  }
+
+  @keyframes soundwave {
+    0% {
+      height: 3px;
+    }
+    100% {
+      height: 12px;
+    }
+  }
+
+  .c-bg-music-control__bar:nth-child(1)  { left: 1px; animation-duration: 474ms; }
+  .c-bg-music-control__bar:nth-child(2)  { left: 5px; animation-duration: 433ms; }
+  .c-bg-music-control__bar:nth-child(3)  { left: 9px; animation-duration: 407ms; }
+  .c-bg-music-control__bar:nth-child(4)  { left: 13px; animation-duration: 458ms; }

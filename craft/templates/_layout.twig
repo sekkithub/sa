@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="/styles/main.css" media="screen, projection"/>
 </head>
 
-<body data-section="{{ (entry.section is defined and entry.section.handle is defined) ? entry.section.handle : 'generic' }}">
+{% set section = entry.section is defined and entry.section.handle is defined ? entry.section.handle : 'generic' %}
+<body data-section="{{ section }}" class="{{ section }}">
   {% include '_components/bg-music' %}
   {% include '_components/preloader' %}
   {% include '_components/header' %}

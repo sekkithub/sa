@@ -6,11 +6,10 @@
 </audio>
 
 <div class="c-bg-music-control  js-bg-music-control">
-  <div id="bars">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
+  <div class="c-bg-music-control__bars">
+    {% for i in 0..3 %}
+    <span class="c-bg-music-control__bar"></span>
+    {% endfor %}
   </div>
   <span>Mute</span>
 </div>

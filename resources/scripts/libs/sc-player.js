@@ -1,5 +1,5 @@
 import './jquery.min';
-
+import { bgMute } from '../components/bg-music';
 /*
 *   SoundCloud Custom Player jQuery Plugin
 *   Author: Matas Petrikas, matas@soundcloud.com
@@ -621,6 +621,7 @@ import './jquery.min';
 
   // toggling play/pause
   $(document).on('click','a.sc-play, a.sc-pause', function(event) {
+    bgMute();
     var $list = $(this).closest('.sc-player').find('ol.sc-trackslist');
     // simulate the click in the tracklist
     $list.find('li.active').click();

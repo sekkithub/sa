@@ -6,14 +6,18 @@
   min-height: 100%;
   opacity: 0;
   padding-top: $unit-large;
-  margin-top: 100vh;
-  transition: all .8s cubic-bezier(.666, 0, .333, 1) 1s;
+  margin-top: 500px;
+  transition: all .6s cubic-bezier(.666, 0, .333, 1) .1s;
+  transform: translateY(100px);
+  visibility: hidden;
+
   @include mq($from: desktop) {
     padding-top: $unit-huge;
   }
 }
 
 body.isLoaded .c-container {
-  margin-top: 500px;
   opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }

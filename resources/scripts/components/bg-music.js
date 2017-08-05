@@ -8,21 +8,21 @@ function isMuted() {
   return $body.hasClass(mutedBgMusic);
 }
 
-function mute() {
+export function bgMute() {
   $body.addClass(mutedBgMusic);
   $('.js-bg-music').animate({ volume: 0 }, 500);
 }
 
-function play() {
+function bgPlay() {
   $body.removeClass(mutedBgMusic);
   $('.js-bg-music').animate({ volume: 1 }, 500);
 }
 
 function toggleBgMusic() {
   if (!isMuted()) {
-    mute();
+    bgMute();
   } else {
-    play();
+    bgPlay();
   }
 }
 
@@ -30,7 +30,7 @@ function addHandlers() {
   $(document).on('click', '.js-bg-music-control', toggleBgMusic);
 }
 
-function init() {
+export default function init() {
   addHandlers();
 }
 

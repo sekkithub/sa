@@ -13,12 +13,20 @@ html {
 }
 
 body {
-  background: url(/images/01.jpg) no-repeat center center;
   background-size: cover;
+  overflow: hidden;
 
   @include mq($from: desktop) {
     background-attachment: fixed;
   }
+}
+
+body.isLoaded {
+  overflow: inherit;
+}
+
+body.home {
+  background: url(/images/01.jpg) no-repeat center center;
 }
 
 body {
