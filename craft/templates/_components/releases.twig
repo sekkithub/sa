@@ -38,13 +38,13 @@
               </div>
               <div class="o-copy">{{ entry.body }}</div>
 
+              {% if entry.soundcloudLink | length %}
               <div class="c-soundcloud-player">
                 <div class="c-soundcloud-player__play-button">
-                  <a href="https://soundcloud.com/quiettimetapes/phil-struck-qtt5" class="sc-player"></a>
-                  <!-- <a href="https://soundcloud.com/space-afrika/nts-radio-space-afrika-w-will-boyd-11032017" class="sc-player"></a> -->
+                  <a href="{{ entry.soundcloudLink }}" class="sc-player"></a>
                 </div>
               </div>
-
+              {% endif %}
 
               {% if entry.links | length %}
                 {% for block in entry.links %}
