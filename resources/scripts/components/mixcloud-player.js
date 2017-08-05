@@ -13,13 +13,26 @@ function draw() {
   setHeight();
 }
 
+function pauseListener() {
+  console.log('paused');
+}
+
+function playListener() {
+  console.log('playing');
+}
+
 function init() {
   draw();
   const widget = Mixcloud.PlayerWidget(document.getElementById('foo'));
+
   widget.ready.then(() => {
     $('.haha').on('click', () => {
+      console.log('clicked');
       widget.play();
     });
+
+    widget.events.pause.on(pauseListener);
+    widget.events.play.on(playListener);
   });
 }
 

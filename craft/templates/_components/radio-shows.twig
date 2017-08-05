@@ -23,7 +23,11 @@
               </div>
               <div class="o-copy">{{ entry.body }}</div>
 
-              <span class="haha">play</span>
+              {% if entry.mixcloudEmbedUrl | length %}
+                <iframe id="foo" class="o-mixcloud-iframe  js-mixcloud-iframe" width="100%" src="{{ entry.mixcloudEmbedUrl }}" frameborder="0"></iframe>
+                <span class="haha">play</span>
+              {% endif %}
+
 
               {% if entry.links | length %}
                 {% for block in entry.links %}
@@ -41,8 +45,6 @@
               <div class="c-carousel__asset  js-carousel-asset{% if block.type == "mixcloud" %}  u-padding-none{% endif %}">
                 {% if block.type == "image" %}
                   <img src="{{ block.asset.first().getUrl() }}" />
-                {% elseif block.type == "mixcloud" %}
-                  <iframe id="foo" class="o-mixcloud-iframe  js-mixcloud-iframe" width="100%" src="{{ block.embedUrl }}" frameborder="0"></iframe>
                 {% endif %}
               </div>
               {% endfor %}

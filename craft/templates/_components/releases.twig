@@ -38,10 +38,10 @@
               </div>
               <div class="o-copy">{{ entry.body }}</div>
 
-              {% if entry.soundcloudLink | length %}
+              {% if entry.soundcloudPageUrl | length %}
               <div class="c-soundcloud-player">
                 <div class="c-soundcloud-player__play-button">
-                  <a href="{{ entry.soundcloudLink }}" class="sc-player"></a>
+                  <a href="{{ entry.soundcloudPageUrl }}" class="sc-player"></a>
                 </div>
               </div>
               {% endif %}
