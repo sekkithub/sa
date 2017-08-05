@@ -15,6 +15,12 @@ function draw() {
 
 function init() {
   draw();
+  const widget = Mixcloud.PlayerWidget(document.getElementById('foo'));
+  widget.ready.then(() => {
+    $('.haha').on('click', () => {
+      widget.play();
+    });
+  });
 }
 
 ee.addListener('init', init);

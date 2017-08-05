@@ -1,3 +1,4 @@
 /resources/scripts/libs/jquery.min.js
 /resources/scripts/libs/sc-player.js
 /resources/scripts/libs/soundcloud.player.api.js
+/resources/scripts/components/mixcloud-player.js
