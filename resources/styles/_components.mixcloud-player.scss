@@ -1,0 +1,24 @@
+/* =======================
+   Components/Mixcloud Player
+   ======================= */
+
+.c-mixcloud-player {
+
+}
+
+  .c-mixcloud-player__controller {
+    background: url('/images/play.svg') no-repeat center center;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+
+    &:hover {
+      background: url('/images/play-hover.svg') no-repeat center center;
+    }
+  }
+
+  .c-mixcloud-player__iframe {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }

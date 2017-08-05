@@ -24,8 +24,10 @@
               <div class="o-copy">{{ entry.body }}</div>
 
               {% if entry.mixcloudEmbedUrl | length %}
-                <iframe id="foo" class="o-mixcloud-iframe  js-mixcloud-iframe" width="100%" src="{{ entry.mixcloudEmbedUrl }}" frameborder="0"></iframe>
-                <span class="haha">play</span>
+              <div class="c-mixcloud-player  js-mixcloud-player">
+                <div class="c-mixcloud-player__controller"></div>
+                <iframe id="foo" class="c-mixcloud-player__iframe" src="{{ entry.mixcloudEmbedUrl }}"></iframe>
+              </div>
               {% endif %}
 
 

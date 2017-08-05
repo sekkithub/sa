@@ -64,7 +64,6 @@ $mq-breakpoints: (
 @import "objects.heading";
 @import "objects.copy";
 @import "objects.permalink";
-@import "objects.mixcloud-iframe";
 
 
 // COMPONENTS
@@ -80,6 +79,7 @@ $mq-breakpoints: (
 @import "components.carousel";
 @import "components.video";
 @import "components.soundcloud-player";
+@import "components.mixcloud-player";
 @import "components.contact";
 @import "components.footer";
 
