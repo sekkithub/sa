@@ -2,27 +2,19 @@ import $ from 'jquery';
 import ee from './ee';
 
 function setHeight() {
-  $('.js-accordion-nav-item.active').each((i, el) => {
-    const iframWidth = $(el).find('.js-mixcloud-iframe').width() - 6;
-    $(el).find('.js-mixcloud-iframe').height(iframWidth);
-  });
+  // $('.js-accordion-nav-item.active').each((i, el) => {
+  //   const iframWidth = $(el).find('.js-mixcloud-iframe').width() - 6;
+  //   $(el).find('.js-mixcloud-iframe').height(iframWidth);
+  // });
 }
 
-function draw() {
-  requestAnimationFrame(draw);
-  setHeight();
-}
-
-function pauseListener() {
-  console.log('paused');
-}
-
-function playListener() {
-  console.log('playing');
-}
+// function draw() {
+//   requestAnimationFrame(draw);
+//   setHeight();
+// }
 
 function init() {
-  draw();
+  // draw();
   const widget = Mixcloud.PlayerWidget(document.getElementById('foo'));
 
   widget.ready.then(() => {
@@ -30,9 +22,6 @@ function init() {
       console.log('clicked');
       widget.play();
     });
-
-    widget.events.pause.on(pauseListener);
-    widget.events.play.on(playListener);
   });
 }
 

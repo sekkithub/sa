@@ -42,7 +42,7 @@
           <div class="o-layout__item  c-carousel__item  u-1/2@desktop  js-carousel-right-item">
             {% if entry.media | length %}
               {% for block in entry.media %}
-              <div class="c-carousel__asset  js-carousel-asset{% if block.type == "mixcloud" %}  u-padding-none{% endif %}">
+              <div class="c-carousel__asset  js-carousel-asset">
                 {% if block.type == "image" %}
                   <img src="{{ block.asset.first().getUrl() }}" />
                 {% endif %}

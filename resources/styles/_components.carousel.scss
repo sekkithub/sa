@@ -36,10 +36,6 @@
       width: 100%;
       margin: 0 auto;
 
-      @include mq($from: tablet) {
-        width: auto;
-      }
-
       @include mq($from: desktop) {
         max-height: 40vw;
       }
