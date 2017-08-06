@@ -27,8 +27,8 @@
               {% endif %}
               {% if entry.mixcloudEmbedUrl | length %}
               <div class="c-mixcloud-player  js-mixcloud-player">
-                <div class="c-mixcloud-player__controller"></div>
-                <iframe id="foo" class="c-mixcloud-player__iframe" src="{{ entry.mixcloudEmbedUrl }}"></iframe>
+                <div class="c-mixcloud-player__controller  js-mixcloud-player-controller" data-slug="{{ entry.slug }}"></div>
+                <iframe id="{{ entry.slug }}" class="c-mixcloud-player__iframe  js-mixcloud-iframe" src="{{ entry.mixcloudEmbedUrl }}" data-slug="{{ entry.slug }}"></iframe>
               </div>
               {% endif %}
 

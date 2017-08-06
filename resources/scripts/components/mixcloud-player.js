@@ -2,12 +2,14 @@ import $ from 'jquery';
 import ee from './ee';
 
 function init() {
-  const widget = Mixcloud.PlayerWidget(document.getElementById('foo'));
+  $('.js-mixcloud-iframe').each((i, el) => {
+    const entrySlug = $(el).data('slug');
+    const widget = Mixcloud.PlayerWidget(document.getElementById(entrySlug));
 
-  widget.ready.then(() => {
-    $('.c-mixcloud-player__controller').on('click', () => {
-      console.log('clicked');
-      widget.play();
+    widget.ready.then(() => {
+      $('.js-mixcloud-player-controller').on('click', () => {
+        widget.play();
+      });
     });
   });
 }
