@@ -17,6 +17,17 @@
     }
   }
 
+  .c-mixcloud-player__controller.playing {
+    background: url('/images/pause.svg') no-repeat center center;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+
+    &:hover {
+      background: url('/images/pause-hover.svg') no-repeat center center;
+    }
+  }
+
   .c-mixcloud-player__iframe {
     height: 0;
     opacity: 0;
