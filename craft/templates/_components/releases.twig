@@ -5,23 +5,8 @@
     <div class="c-carousel  js-carousel">
       {% for entry in craft.entries.section('releases') %}
       <div class="c-carousel__slide  js-carousel-slide"{% if entry.backdropImage | length %} style="background-image: url({{ entry.backdropImage.first().getUrl() }});"{% endif %}>
-        <div class="o-layout  o-layout--middle  o-layout--flush  o-layout--reverse  c-accordion-nav__layout">
-          <div class="o-layout__item  u-1/2@desktop  c-carousel__item">
-            {% if entry.media | length %}
-              <div class="c-carousel__asset  js-carousel-asset">
-                {% for block in entry.media %}
-                  {% if block.type == "image" %}
-                    <img src="{{ block.asset.first().getUrl() }}" />
-                  {% elseif block.type == "youtube" %}
-                    <div class="c-video">
-                      <iframe src="{{ block.linkUrl }}" width="100%" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  {% endif %}
-                {% endfor %}
-              </div>
-            {% endif %}
-          </div>
-          <div class="o-layout__item  c-accordion-nav__layout-item  c-carousel__item  u-1/2@desktop  js-carousel-right-item">
+        <div class="o-layout  o-layout--middle  o-layout--flush  c-accordion-nav__layout">
+          <div class="o-layout__item  c-accordion-nav__layout-item  u-1/2@desktop  c-carousel__item">
             {% if entry.body | length %}
             <div class="c-accordion-nav__details  js-accordion-nav-details">
               <div class="c-carousel__controller  u-flex  u-flex--space-between">
@@ -54,6 +39,21 @@
                 {% endfor %}
               {% endif %}
             </div>
+            {% endif %}
+          </div>
+          <div class="o-layout__item  c-carousel__item  u-1/2@desktop  js-carousel-right-item">
+            {% if entry.media | length %}
+              <div class="c-carousel__asset  js-carousel-asset">
+                {% for block in entry.media %}
+                  {% if block.type == "image" %}
+                    <img src="{{ block.asset.first().getUrl() }}" />
+                  {% elseif block.type == "youtube" %}
+                    <div class="c-video">
+                      <iframe src="{{ block.embedLinkUrl }}" width="100%" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
             {% endif %}
           </div>
         </div>
