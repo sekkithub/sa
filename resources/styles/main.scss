@@ -61,6 +61,7 @@ $mq-breakpoints: (
 @import "../../node_modules/inuitcss/objects/objects.list-bare";
 @import "../../node_modules/inuitcss/objects/objects.list-inline";
 @import "../../node_modules/inuitcss/objects/objects.block";
+@import "objects.fixed-bg-image";
 @import "objects.heading";
 @import "objects.copy";
 @import "objects.permalink";
@@ -68,7 +69,6 @@ $mq-breakpoints: (
 
 
 // COMPONENTS
-@import "components.preloader";
 @import "components.bg-music";
 @import "components.header";
 @import "components.container";

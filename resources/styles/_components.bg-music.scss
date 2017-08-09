@@ -15,11 +15,15 @@
   padding: 2px 22px;
   position: fixed;
   transition: all .4s .8s;
-  right: $unit-large;
+  right: $unit;
   user-select: none;
   visibility: hidden;
   z-index: 10;
   @include font-size(14px);
+
+  @include mq($from: tablet) {
+    right: $unit-large;
+  }
 }
 
 body.isLoaded .c-bg-music-control {

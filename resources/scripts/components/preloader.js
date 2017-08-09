@@ -2,10 +2,12 @@ import $ from 'jquery';
 import imagesLoaded from 'imagesloaded';
 import ee from './ee';
 
+const $html = $('html');
 const $body = $('body');
 
 function isLoaded() {
   $body.addClass('isLoaded');
+  $html.removeClass('no-scroll');
 }
 
 function hidePreloader() {

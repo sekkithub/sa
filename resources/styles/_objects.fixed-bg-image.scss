@@ -1,0 +1,18 @@
+/* =======================
+   Objects/Fixed Bg Image
+   ======================= */
+
+.o-fixed-bg-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  @include mq($from: desktop) {
+    height: 100%;
+    position: fixed;
+  }
+}

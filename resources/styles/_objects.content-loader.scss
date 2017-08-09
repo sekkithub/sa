@@ -7,7 +7,13 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  transition: all .2s .4s;
   width: 60px;
+}
+
+body.isLoaded .o-content-loader {
+  opacity: 0;
+  visibility: hidden;
 }
 
   .o-content-loader__image {

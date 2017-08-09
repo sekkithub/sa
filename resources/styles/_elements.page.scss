@@ -12,21 +12,8 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-body {
-  background-size: cover;
+html.no-scroll {
   overflow: hidden;
-
-  @include mq($from: desktop) {
-    background-attachment: fixed;
-  }
-}
-
-body.isLoaded {
-  overflow: inherit;
-}
-
-body.home {
-  background: url(/images/01.jpg) no-repeat center center;
 }
 
 body {
