@@ -3,7 +3,7 @@
     <div class="o-layout  o-layout--middle  o-layout--large">
       <div class="o-layout__item  u-1/2@tablet  u-1/2@desktop">
         {% if entry.contactImage | length %}
-        <img src="{{ entry.contactImage.first().getUrl() }}" class="c-contact__image" />
+        <img src="{{ entry.contactImage.first().getUrl('mediaImage') }}" class="c-contact__image" />
         {% endif %}
       </div>
       <div class="o-layout__item  u-1/2@tablet  u-1/2@desktop">
