@@ -4,7 +4,7 @@
   <div class="c-accordion-nav__content  js-accordion-nav-content">
     <div class="o-wrapper  o-wrapper--huge">
       <div class="js-carousel">
-        <div class="js-carousel-slide"{% if entry.backdropImage | length %} style="background-image: url({{ entry.backdropImage.first().getUrl() }});"{% endif %}>
+        <div class="js-carousel-slide">
           <div class="c-future-current  js-accordion-nav-details">
             {% for entry in craft.entries.section('futureCurrent') %}
               <div class="c-future-current__item  u-constrain--tiny">

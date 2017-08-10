@@ -6,7 +6,7 @@
   min-height: 100%;
   padding-top: $unit-large;
   margin-top: 400px;
-  transition: all 1.4s cubic-bezier(.666, 0, .333, 1);
+  transition: all 1.4s cubic-bezier(.666, 0, .333, 1) .6s;
   transform: translateY(0);
 
   @include mq($from: desktop) {
