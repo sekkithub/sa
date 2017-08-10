@@ -47,7 +47,7 @@
               {% for block in entry.media %}
               <div class="c-carousel__asset  js-carousel-asset">
                 {% if block.type == "image" %}
-                  <img src="{{ block.asset.first().getUrl() }}" />
+                  <img src="{{ block.asset.first().getUrl('mediaImage') }}" />
                 {% endif %}
               </div>
               {% endfor %}

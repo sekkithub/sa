@@ -46,7 +46,7 @@
               <div class="c-carousel__asset  js-carousel-asset">
                 {% for block in entry.media %}
                   {% if block.type == "image" %}
-                    <img src="{{ block.asset.first().getUrl() }}" />
+                    <img src="{{ block.asset.first().getUrl('mediaImage') }}" />
                   {% elseif block.type == "youtube" %}
                     <div class="c-video">
                       <iframe src="{{ block.embedLinkUrl }}" width="100%" frameborder="0" allowfullscreen></iframe>
