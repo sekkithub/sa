@@ -1,1 +1,3 @@
+{% if entry.backdropImage | length %}
 <div class="o-fixed-bg-image" style="background-image: url({{ entry.backdropImage.first().getUrl('backdropImage') }});"></div>
+{% endif %}
