@@ -12,10 +12,6 @@
   margin-bottom: $unit;
   @include hide_last_margin;
 
-  @include mq($from: desktop) {
-    margin-bottom: 0;
-  }
-
   .o-layout--equal-height & {
     display: flex;
   }
