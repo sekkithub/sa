@@ -5,3 +5,20 @@
   padding-bottom: $unit-large;
   padding-top: $unit-large;
 }
+
+.foo {
+  text-align: center;
+  position: relative;
+    overflow: hidden;
+}
+
+.hoge {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 85%;
+  border: 6px solid transparent;
+}
+
+.hoge img {
+  max-width: 600px;
+}
