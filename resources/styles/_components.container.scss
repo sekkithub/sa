@@ -19,3 +19,9 @@
 body.isLoaded .c-container {
   transform: translateY(0);
 }
+
+body.visuals .c-container {
+  background-color: transparent;
+  margin-top: 0 !important;
+  transform: translateY(0);
+}

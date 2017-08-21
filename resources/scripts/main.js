@@ -8,6 +8,7 @@ import './components/accordion-nav';
 import './components/carousels';
 import './components/preloader';
 // import './components/smooth-scrollbar';
+import './components/visuals';
 import './components/bg-music';
 import './components/mixcloud-player';
 import './components/three';

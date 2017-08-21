@@ -5,17 +5,23 @@
 
   <div class="c-visuals">
     <div class="o-wrapper">
-      <div class="foo">
+
         {% for block in entry.visuals %}
           {% if block.type == "images" %}
-            {% for asset in block.assets %}
-              <div class="hoge">
-                <img src="{{ asset.url }}" />
-              </div>
-            {% endfor %}
+            {% set visuals = block.assets %}
+            {% if visuals | length %}
+              {% set groupedVisuals = visuals|batch(3) %}
+              {% for thumbnails in groupedVisuals %}
+                <div class="foo">
+                  {% for asset in thumbnails %}
+                  <img src="{{ asset.url }}" width="33%" style="padding: 25px;" />
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            {% endif %}
           {% endif %}
         {% endfor %}
-      </div>
+
     </div>
   </div>
 {% endblock %}

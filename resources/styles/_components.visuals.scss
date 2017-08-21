@@ -7,9 +7,10 @@
 }
 
 .foo {
-  text-align: center;
-  position: relative;
-    overflow: hidden;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .hoge {
@@ -17,8 +18,4 @@
   vertical-align: middle;
   max-width: 85%;
   border: 6px solid transparent;
-}
-
-.hoge img {
-  max-width: 600px;
 }
