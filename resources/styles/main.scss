@@ -10,6 +10,7 @@ $bt-font-path: '/fonts/black-tie/fonts';
 @import "libs/black-tie.scss";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "../../node_modules/slick-lightbox/dist/slick-lightbox.css";
 @import "libs/slick-custom.scss";
 @import "../../node_modules/plyr/src/scss/plyr.scss";
 @import "../../node_modules/smooth-scrollbar/dist/smooth-scrollbar.css";
@@ -68,6 +69,7 @@ $mq-breakpoints: (
 @import "objects.permalink";
 @import "objects.content-loader";
 @import "objects.canvas";
+@import "objects.back-to-home";
 
 
 // COMPONENTS

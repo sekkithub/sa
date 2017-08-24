@@ -734,7 +734,7 @@ babel-register@^6.24.1:
     mkdirp "^0.5.1"
     source-map-support "^0.4.2"
 
-babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0:
+babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.9.2:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.23.0.tgz#0a9489f144de70efb3ce4300accdb329e2fc543b"
   dependencies:
@@ -3913,6 +3913,10 @@ kind-of@^4.0.0:
   dependencies:
     is-buffer "^1.1.5"
 
+knot.js@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/knot.js/-/knot.js-1.1.5.tgz#28e72522f703f50fe98812fde224dd72728fef5d"
+
 laravel-mix@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/laravel-mix/-/laravel-mix-1.0.7.tgz#f9636bf6025118f365bfa0f5f1ae49f41df0aa6a"
@@ -3950,6 +3954,12 @@ laravel-mix@^1.0.7:
     webpack-merge "^4.1.0"
     webpack-notifier "^1.5.0"
     yargs "^8.0.1"
+
+layzr.js@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/layzr.js/-/layzr.js-2.2.2.tgz#c9c6a2bd0e78f25d8ec5919c787321489ee49873"
+  dependencies:
+    knot.js "^1.1.5"
 
 lazy-cache@^0.2.3:
   version "0.2.7"
@@ -5914,6 +5924,10 @@ schema-utils@^0.3.0:
   dependencies:
     ajv "^5.0.0"
 
+scrollmagic@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/scrollmagic/-/scrollmagic-2.0.5.tgz#ad7597341c76fb1f4a5bec12968a09223bd08dd9"
+
 scss-tokenizer@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
@@ -6103,6 +6117,16 @@ slick-carousel@^1.6.0:
   resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.6.0.tgz#780f378e470f4e6f6bec1aa2bae0475f4f9eb085"
   dependencies:
     jquery ">=1.7.2"
+
+slick-lightbox@^0.2.10:
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/slick-lightbox/-/slick-lightbox-0.2.10.tgz#80f617783f420cb96d961aea24099ff8e6153390"
+
+smooth-scrollbar@^7.3.1:
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/smooth-scrollbar/-/smooth-scrollbar-7.3.1.tgz#1527320fd10939dc7b3ed5a605d78600df5d7b71"
+  dependencies:
+    babel-runtime "^6.9.2"
 
 sntp@1.x.x:
   version "1.0.9"
@@ -6551,6 +6575,10 @@ tfunk@^3.0.1:
   dependencies:
     chalk "^1.1.1"
     object-path "^0.9.0"
+
+three@^0.84.0:
+  version "0.84.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.84.0.tgz#95be85a55a0fa002aa625ed559130957dcffd918"
 
 through2-filter@^2.0.0:
   version "2.0.0"

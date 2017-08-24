@@ -1,5 +1,5 @@
 {% if entry.backgroundMusicFile | length %}
-<audio class="c-bg-music  js-bg-music" autoplay loop>
+<audio class="c-bg-music  js-bg-music" loop>
   <source src="{{ entry.backgroundMusicFile.first().getUrl() }}" type="audio/mpeg">
   <div class="o-copy">
     <p>Your browser does not support HTML5 audio, but you can still</p>

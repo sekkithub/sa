@@ -2,20 +2,29 @@
    Components/Visuals
    ======================= */
 .c-visuals {
-  padding-bottom: $unit-large;
+  // background-color: complement(black);
+  padding-bottom: $unit-huge;
   padding-top: $unit-large;
 }
 
-.foo {
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
+    .c-visuals__image {
+      padding: $unit-small;
+    }
 
-.hoge {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 85%;
-  border: 6px solid transparent;
-}
+
+  #infscr-loading {
+    bottom: $unit;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+  }
+
+  #infscr-loading img {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }

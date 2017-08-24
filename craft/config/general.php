@@ -58,8 +58,12 @@ return array(
         'environment' => 'staging'
     ),
 
-    'www.dinnerbyheston.com' => array(
+    'spaceafrika.co.uk' => array(
         'cooldownDuration' => 0,
+        'environmentVariables' => array(
+          'baseUrl' => 'http://spaceafrika.co.uk/',
+          'basePath' => '/home/deployer/apps/spaceafrika/production/public/',
+        ),
         'siteUrl' => 'http://www.sample.com',
         'environment' => 'production'
     ),
