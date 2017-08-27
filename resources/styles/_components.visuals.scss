@@ -3,11 +3,16 @@
    ======================= */
 .c-visuals {
   padding-bottom: $unit-huge;
-  padding-top: $unit-large;
+  padding-top: $unit-huge;
 }
 
     .c-visuals__image {
-      padding: $unit-small;
+      cursor: url(/images/plus.svg) 25 25, zoom-in;
+      transition: all .2s;
+
+      @include mq($from: tablet) {
+        padding: $unit-small;
+      }
     }
 
   #infscr-loading {

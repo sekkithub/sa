@@ -6,16 +6,7 @@
 }) %}
 
 {% block content %}
-  <div class="c-hero">
-    {% include '_components/fixed-bg-image' %}
-
-    <header class="c-header">
-      <div class="o-wrapper  o-wrapper--huge">
-        <h1 class="o-heading  o-heading--large  c-header__logo">{{ siteName }}</h1>
-      </div>
-    </header>
-  </div>
-
+  {% include '_components/hero' %}
   <div class="c-main-content">
     {% include '_components/about' %}
     {% include '_components/accordion-content' %}

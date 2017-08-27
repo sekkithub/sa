@@ -3,11 +3,9 @@
    ======================= */
 
 .o-back-to-home {
-  left: $unit;
+  left: 50%;
   position: fixed;
-  top: $unit;
-}
-
-body.home .o-back-to-home {
-  display: none;
+  text-transform: uppercase;
+  top: 40px;
+  transform: translateX(-50%);
 }
