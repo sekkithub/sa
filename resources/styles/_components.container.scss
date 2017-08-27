@@ -2,18 +2,18 @@
    Components/Container
    ======================= */
 .c-container {
-  // background-color: color(white);
-  // min-height: 100%;
-  // padding-top: $unit-large;
-  // margin-top: 400px;
-  // transition: all 1.4s cubic-bezier(.666, 0, .333, 1) .6s;
-  // transform: translateY(0);
-  //
-  // @include mq($from: desktop) {
-  //   margin-top: 500px;
-  //   padding-top: $unit-huge;
-  //   transform: translateY(500px);
-  // }
+  background-color: color(white);
+  min-height: 100%;
+  padding-top: $unit-large;
+  margin-top: 400px;
+  transition: all 1.4s cubic-bezier(.666, 0, .333, 1) .6s;
+  transform: translateY(0);
+
+  @include mq($from: desktop) {
+    margin-top: 500px;
+    padding-top: $unit-huge;
+    transform: translateY(500px);
+  }
 }
 
 body.isLoaded .c-container {

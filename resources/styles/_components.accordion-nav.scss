@@ -56,8 +56,10 @@
         padding-top: $unit-small;
         text-transform: uppercase;
 
-        &:hover .c-accordion-nav__heading {
-          transform: translateX(10px);
+        &:hover .c-accordion-nav__heading,
+        &:hover .c-accordion-nav__plus:before,
+        &:hover .c-accordion-nav__plus:after {
+          opacity: 0.25;
         }
       }
 
@@ -68,8 +70,7 @@
         .c-accordion-nav__heading {
           backface-visibility: hidden;
           display: inline-block;
-          transition: transform .3s;
-          transform: translateX(0);
+          transition: opacity .2s;
         }
 
         .c-accordion-nav__content {

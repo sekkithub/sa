@@ -7,3 +7,7 @@
   position: fixed;
   top: $unit;
 }
+
+body.home .o-back-to-home {
+  display: none;
+}
