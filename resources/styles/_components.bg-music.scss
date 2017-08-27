@@ -6,16 +6,15 @@
 }
 
 .c-bg-music-control {
-  background-color: color(white);
-  bottom: $unit;
   border: 1px solid color(dark-grey);
   color: color(dark-grey);
   cursor: pointer;
   opacity: 0;
-  padding: 2px 22px;
+  padding: 4px 8px;
   position: fixed;
   transition: all .4s .8s;
   right: $unit;
+  top: $unit;
   user-select: none;
   visibility: hidden;
   z-index: 10;

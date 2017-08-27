@@ -2,26 +2,19 @@
    Components/Container
    ======================= */
 .c-container {
-  background-color: color(white);
-  min-height: 100%;
-  padding-top: $unit-large;
-  margin-top: 400px;
-  transition: all 1.4s cubic-bezier(.666, 0, .333, 1) .6s;
-  transform: translateY(0);
-
   @include mq($from: desktop) {
     margin-top: 500px;
-    padding-top: $unit-huge;
-    transform: translateY(500px);
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    visibility: hidden;
   }
 }
 
 body.isLoaded .c-container {
-  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 body.visuals .c-container {
-  background-color: transparent;
-  margin-top: 0 !important;
-  transform: translateY(0);
+  margin-top: 0;
 }

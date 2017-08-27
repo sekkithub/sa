@@ -5,14 +5,22 @@
 
 }
 
-  .c-contact__item {
-    margin-bottom: $unit;
-    @include hide_last_margin;
+  .c-contact__image-item {
+    margin-bottom: $unit-large;
+
+    @include mq($from: tablet) {
+      margin-bottom: 0;
+    }
   }
 
     .c-contact__image {
       width: 100%;
     }
+
+  .c-contact__item {
+    margin-bottom: $unit;
+    @include hide_last_margin;
+  }
 
     .c-contact__heading {
       margin-bottom: 0;

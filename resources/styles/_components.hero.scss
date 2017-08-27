@@ -1,0 +1,10 @@
+/* =======================
+   Components/Hero
+   ======================= */
+.c-hero {
+  height: 400px;
+
+  @include mq($from: desktop) {
+    height: auto;
+  }
+}

@@ -1,0 +1,13 @@
+/* =======================
+   Components/Main Content
+   ======================= */
+.c-main-content {
+  background-color: color(white);
+  padding-top: $unit-large;
+  position: relative;
+  z-index: 2;
+
+  @include mq($from: tablet) {
+    padding-top: $unit-huge;
+  }
+}

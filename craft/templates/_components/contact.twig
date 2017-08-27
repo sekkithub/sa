@@ -1,7 +1,7 @@
 <section class="c-contact">
   <div class="o-wrapper  o-wrapper--huge">
     <div class="o-layout  o-layout--middle  o-layout--large">
-      <div class="o-layout__item  u-1/2@tablet  u-1/2@desktop">
+      <div class="o-layout__item  u-1/2@tablet  u-1/2@desktop  c-contact__image-item">
         {% if entry.contactImage | length %}
         <img src="{{ entry.contactImage.first().getUrl('mediaImage') }}" class="c-contact__image" />
         {% endif %}

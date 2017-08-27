@@ -1,6 +1,6 @@
 {% minify %}
 <!DOCTYPE html>
-<html class="no-js  no-scroll">
+<html class="no-js">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   {% hook 'seomaticRender' %}
@@ -9,14 +9,8 @@
 
 {% set section = entry.section is defined and entry.section.handle is defined ? entry.section.handle : 'generic' %}
 <body data-section="{{ section }}" class="{{ section }}">
-  {% include '_components/fixed-bg-image' %}
   {% include '_components/bg-music' %}
-  {% include '_components/header' %}
   {% include '_components/content-loader' %}
-
-  <div class="o-back-to-home">
-    <a href="{{ siteUrl }}">Back home</a>
-  </div>
 
   <div class="c-container  js-container">
     {% block content %}

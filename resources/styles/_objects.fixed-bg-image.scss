@@ -10,9 +10,10 @@
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 0;
 
   @include mq($from: desktop) {
-    height: 100%;
+    height: 500px;
     position: fixed;
   }
 }
