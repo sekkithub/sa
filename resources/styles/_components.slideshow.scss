@@ -1,0 +1,52 @@
+/* =======================
+   Components/Slideshow
+   ======================= */
+.c-slideshow {
+  height: 100%;
+  width: 100%;
+  transition: all .4s;
+  position: absolute;
+  z-index: 2;
+}
+
+  .c-slideshow__slide {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+  }
+
+    .c-slideshow .slick-track {
+      display: flex;
+      align-items: center;
+    }
+
+  .c-slideshow__control {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include font-size(60px);
+  }
+
+  .c-slideshow__prev {
+    cursor: url(/images/prev.svg) 39 14, auto;
+    left: 0;
+    width: 30%;
+  }
+
+  .c-slideshow__next {
+    cursor: url(/images/next.svg) 41 14, auto;
+    right: 0;
+    width: 70%;
+  }
+
+  .c-slideshow__close {
+    color: color(white);
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 10;
+    @include font-size(50px, 1);
+  }

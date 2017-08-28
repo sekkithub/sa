@@ -12,6 +12,7 @@ import './components/visuals';
 import './components/bg-music';
 import './components/mixcloud-player';
 import './components/three';
+import './components/slideshow';
 
 import './libs/soundcloud.player.api';
 import './libs/sc-player';
