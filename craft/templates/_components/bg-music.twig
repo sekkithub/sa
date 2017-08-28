@@ -1,4 +1,4 @@
-{% if craft.lj_mobiledetect.type != "tablet" or craft.lj_mobiledetect.type != "phone" and entry.backgroundMusicFile | length %}
+{% if entry.backgroundMusicFile | length and craft.lj_mobiledetect.type != "tablet" and craft.lj_mobiledetect.type != "phone" %}
   <audio class="c-bg-music  js-bg-music" autoplay loop>
     <source src="{{ entry.backgroundMusicFile.first().getUrl() }}" type="audio/mpeg">
     <div class="o-copy">
