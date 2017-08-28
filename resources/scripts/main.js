@@ -6,6 +6,7 @@ import ee from './components/ee';
 import './components/about';
 import './components/accordion-nav';
 import './components/carousels';
+import './components/thumbnails';
 import './components/preloader';
 // import './components/smooth-scrollbar';
 import './components/visuals';

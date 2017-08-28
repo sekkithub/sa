@@ -12,7 +12,7 @@
           {% paginate block.assets.limit(6) as pageInfo, pageEntries %}
           {% for asset in pageEntries %}
           <div class="o-layout__item  u-1/2@tablet  u-1/3@desktop  c-visuals__item  js-visuals-item">
-            <img src="{{ asset.url }}" class="c-visuals__image" />
+            <img src="{{ asset.url }}" class="c-visuals__image  js-thumbnail-image" />
           </div>
           {% endfor %}
           {{ pageInfo | infinitescroll(containerSelector=".c-visuals__content", itemSelector=".c-visuals__item", loadingImage="/images/loader-black.svg") }}
