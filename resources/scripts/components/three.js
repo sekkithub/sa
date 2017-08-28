@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import * as THREE from 'three';
 import ee from './ee';
 
@@ -95,8 +96,10 @@ function animate() {
 }
 
 function init() {
-  initThree();
-  animate();
+  if ($('.js-canvas').length) {
+    initThree();
+    animate();
+  }
 }
 
 ee.addListener('init', init);

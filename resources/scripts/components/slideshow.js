@@ -13,6 +13,7 @@ function slideshowInit() {
     nextArrow: '.js-slideshow-next',
     speed: 400,
     infinite: false,
+    swipeToSlide: true,
   });
 }
 

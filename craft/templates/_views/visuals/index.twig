@@ -1,7 +1,7 @@
 {% extends (craft.request.isAjax and not craft.request.isLivePreview) ? "_ajax-layout" : "_layout" %}
 
 {% block content %}
-  <div id="{{ entry.slug }}" class="o-canvas"></div>
+  <div id="{{ entry.slug }}" class="o-canvas  js-canvas"></div>
   {% include '_components/back-to-home' %}
 
   <div class="c-visuals">
@@ -19,6 +19,9 @@
   </div>
 
   <div class="c-modal  u-flex  u-flex--middle">
+    <div class="c-slideshow__close  js-slideshow-close">
+      <img src="/images/close.svg" class="c-slideshow__close-image" />
+    </div>
     {% include '_components/slideshow' %}
   </div>
 {% endblock %}
