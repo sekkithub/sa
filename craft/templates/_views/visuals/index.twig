@@ -1,7 +1,7 @@
 {% extends (craft.request.isAjax and not craft.request.isLivePreview) ? "_ajax-layout" : "_layout" %}
 
 {% block content %}
-  <!-- <div id="{{ entry.slug }}" class="o-canvas"></div> -->
+  <div id="{{ entry.slug }}" class="o-canvas"></div>
   {% include '_components/back-to-home' %}
 
   <div class="c-visuals">
@@ -10,7 +10,7 @@
         <div class="o-layout  o-layout--middle  c-visuals__content">
           {% for asset in block.assets %}
           <div class="o-layout__item  u-1/2@tablet  u-1/3@desktop  c-visuals__item  js-visuals-item">
-            <img src="{{ asset.getUrl('thumbnail') }}" class="c-visuals__image  js-thumbnail-image" />
+            <img data-normal="{{ asset.getUrl('thumbnail') }}" class="c-visuals__image  js-thumbnail-image" />
           </div>
           {% endfor %}
         </div>

@@ -10,6 +10,7 @@
 }
 
   .o-back-to-home__link {
+    color: color(green);
     text-decoration: none;
     transition: all .2s;
     @include font-size(24px);

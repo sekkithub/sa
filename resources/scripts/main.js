@@ -9,7 +9,7 @@ import './components/carousels';
 import './components/thumbnails';
 import './components/preloader';
 // import './components/smooth-scrollbar';
-import './components/visuals';
+import './components/lazyLoadingImages';
 import './components/bg-music';
 import './components/mixcloud-player';
 import './components/three';

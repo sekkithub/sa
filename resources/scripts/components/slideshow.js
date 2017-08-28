@@ -7,12 +7,12 @@ function slideshowInit() {
     dots: false,
     slidesToShow: 1,
     lazyLoad: 'progressive',
-    touchThreshold: 10,
+    touchThreshold: 2,
     slide: '.js-slideshow-slide',
-    draggable: false,
     prevArrow: '.js-slideshow-prev',
     nextArrow: '.js-slideshow-next',
-    speed: 600,
+    speed: 400,
+    infinite: false,
   });
 }
 
