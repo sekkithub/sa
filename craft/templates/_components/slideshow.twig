@@ -1,12 +1,13 @@
 <div class="c-slideshow  js-slideshow">
   {% for block in entry.visuals %}
     {% for asset in block.assets %}
-    <div class="c-slideshow__slide  js-slideshow-slide" style="background-image: url('{{ asset.getUrl() }}');"></div>
+    <div class="c-slideshow__slide  js-slideshow-slide" style="background-image: url('{{ asset.getUrl('slideshowImage') }}');"></div>
     {% endfor %}
   {% endfor %}
 
   <div class="c-slideshow__close  js-slideshow-close">
-    <i class="btr bt-times"></i>
+    <!-- <i class="btr bt-times"></i> -->
+    <img src="/images/close.svg" width="48" />
   </div>
   <div class="c-slideshow__control  c-slideshow__prev  js-slideshow-prev"></div>
   <div class="c-slideshow__control  c-slideshow__next  js-slideshow-next"></div>

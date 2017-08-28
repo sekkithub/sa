@@ -30,13 +30,13 @@
   }
 
   .c-slideshow__prev {
-    cursor: url(/images/prev.svg) 39 14, auto;
+    cursor: url(/images/prev.svg) 39 14, w-resize;
     left: 0;
     width: 30%;
   }
 
   .c-slideshow__next {
-    cursor: url(/images/next.svg) 41 14, auto;
+    cursor: url(/images/next.svg) 41 14, e-resize;
     right: 0;
     width: 70%;
   }

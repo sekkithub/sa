@@ -5,7 +5,16 @@
 .o-back-to-home {
   left: 50%;
   position: fixed;
-  text-transform: uppercase;
   top: 40px;
   transform: translateX(-50%);
 }
+
+  .o-back-to-home__link {
+    text-decoration: none;
+    transition: all .2s;
+    @include font-size(24px);
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }

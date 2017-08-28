@@ -6,7 +6,6 @@
 }
 
 .c-bg-music-control {
-  background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid color(dark-grey);
   color: color(dark-grey);
   cursor: pointer;
@@ -22,6 +21,10 @@
   @include font-size(14px);
 
   @include mq($from: tablet) {
+    right: $unit-large;
+  }
+
+  @include mq($from: desktop) {
     right: $unit * 1.5;
   }
 }
