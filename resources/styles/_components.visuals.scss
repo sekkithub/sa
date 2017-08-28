@@ -7,7 +7,7 @@
 }
 
     .c-visuals__image {
-      cursor: url(/images/plus.svg) 25 25, zoom-in;
+      cursor: url(/images/oval.svg) 25 25, zoom-in;
       transition: all .2s;
 
       @include mq($from: tablet) {

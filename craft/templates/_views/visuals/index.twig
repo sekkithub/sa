@@ -6,19 +6,15 @@
 
   <div class="c-visuals">
     <div class="o-wrapper">
-
-      {% for block in entry.visuals %}
+      {% for block in entry.visuals.type('images') %}
         <div class="o-layout  o-layout--middle  c-visuals__content">
-          {% paginate block.assets.limit(6) as pageInfo, pageEntries %}
-          {% for asset in pageEntries %}
+          {% for asset in block.assets %}
           <div class="o-layout__item  u-1/2@tablet  u-1/3@desktop  c-visuals__item  js-visuals-item">
             <img src="{{ asset.url }}" class="c-visuals__image  js-thumbnail-image" />
           </div>
           {% endfor %}
-          {{ pageInfo | infinitescroll(containerSelector=".c-visuals__content", itemSelector=".c-visuals__item", loadingImage="/images/loader-black.svg") }}
         </div>
       {% endfor %}
-
     </div>
   </div>
 
